@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom"
 import HelloWorld from './HelloWorld'
 import {Provider} from 'react-redux'
-import configureStore from '../configureStore'
+import configureStore from '../store/configureStore'
 
 const store = configureStore();
 
