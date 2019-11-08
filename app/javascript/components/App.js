@@ -15,6 +15,7 @@ class App extends React.Component {
     }
     
     this.handleLogin = this.handleLogin.bind(this);
+    this.handleLogout= this.handleLogout.bind(this);
   }
 
   handleLogin(data){
@@ -25,6 +26,12 @@ class App extends React.Component {
     })
   }
 
+  handleLogout(){
+    this.setState({
+      loggedInStatus: "NOT_LOGGED_IN",
+      user: {} 
+    })
+  }
 // this keeps the user logged in even if refresh
 
   checkLoginStatus(){
@@ -48,7 +55,8 @@ class App extends React.Component {
           <Switch>
             <Route exact 
               path='/'
-              render={(props) => (<Home {...props} 
+              render={(props) => (<Home {...props}
+              handleLogout={this.handleLogout} 
               handleLogin={this.handleLogin}
               status={this.state.loggedInStatus} />) } />
 
