@@ -3,6 +3,7 @@ import Registration from './auth/Registration'
 import Login from "./auth/Login"
 import Navbar from "./navbar"
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom"
+import HookHome from './HookHome'
 
 export default class Home extends Component {
     
@@ -27,18 +28,8 @@ export default class Home extends Component {
         return (
             <React.Fragment>
             <Navbar />
-            <div>
-                <h1 className="megatitle">Buy and sell cryptocurrency</h1>
-                <h2 className="subtitle">Coinbase is the easiest place to buy, sell, and manage your cryptocurrency portfolio.</h2>
+            <HookHome />
             
-                <div className="email-group">
-                    <input className="email-input" type="text" placeholder="Email address" />
-                    <button name="button" type="submit" className="btn btn-flat green">
-                    Get Started
-                    </button>
-                </div>
-
-            </div>
             {/* <button onClick={()=>this.handleLogoutClick()}>Log out</button> */}
             <BrowserRouter>
             <Switch>
