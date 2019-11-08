@@ -1,6 +1,8 @@
-import React from 'react';
+import React from 'react'
 import { Link } from "react-router-dom"
+
 class Navbar extends React.Component {
+
     render() {
         return (
             <div className="flex-container-navbar">
@@ -22,5 +24,5 @@ class Navbar extends React.Component {
 }
 
 
-export default Navbar;
+export default Navbar
 

@@ -25,7 +25,7 @@ export default class Home extends Component {
     }
     render() {
         return (
-            <React.Fragment>
+            <div>
             <Navbar />
             <div>
             <h1 className="megatitle">Buy and sell cryptocurrency</h1>
@@ -53,7 +53,7 @@ export default class Home extends Component {
             render={(props) => <Login handleSuccess={this.handleSuccess} />} />
             </Switch>
             </BrowserRouter>
-            </React.Fragment>
+            </div>
             )
         }
     }
