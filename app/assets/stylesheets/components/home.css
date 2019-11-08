@@ -70,6 +70,17 @@ input::placeholder {
   padding: 0 0 0 8px;
 }
 
+input:placeholder-shown{
+  padding: 0 0 0 8px;
+    font-size: 19px;
+}
+
+input{
+  padding: 0 0 0 8px;
+  font-weight: lighter;
+  font-size:19px
+}
+
 .search-form-control .form-control:focus {
   border: 1px solid #1EDD88;
   outline: none !important;
