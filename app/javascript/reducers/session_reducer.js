@@ -4,12 +4,14 @@ const _nullUser = {
 
 const sessionReducer = (state = _nullUser, action) => {
     switch (action.type) {
-        case RECEIVE_CURRENT_USER:
+        case "RECEIVE_CURRENT_USER":
             const { id } = action.currentUser;
             return Object.assign({}, { id });
-        case LOGOUT:
+        case "LOGOUT":
             return _nullUser;
         default:
             return state;
     }
 };
+
+export default sessionReducer;

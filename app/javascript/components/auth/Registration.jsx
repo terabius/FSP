@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { signup } from '../../util/session_v1_util';
+// import { signup } from '../../util/session_v1_util';
 
 export default class Registration extends Component {
     constructor(props){
@@ -14,11 +14,24 @@ export default class Registration extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
+// NEED TO CLEAN THIS . AJAX CALL IN THE . MIDDLE LOL
+// ***********************************************************************************************************************************************************************************
 
     handleSubmit(event) {
         console.log('submitted');
         event.preventDefault();
-        signup(this.state);
+        const user = this.state
+        $.ajax({
+            method: "POST",
+            url: `/v1/users`,
+            data: { user }
+        })
+        .then(r => { 
+            if(r.status === 'created'){
+                this.props.handleSuccess(r.user);
+            }
+        });
+        
     }
 
     handleChange(event){
@@ -28,7 +41,8 @@ export default class Registration extends Component {
         });
     }
 
-
+// WHY THIS LINE 
+// ***********************************************************************************************************************************************************************************
     componentDidMount(){
         console.log('mont')
     }

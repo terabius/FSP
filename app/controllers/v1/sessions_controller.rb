@@ -1,5 +1,7 @@
 class V1::SessionsController < ApplicationController
 
+  ##need to rework to protect destroy method 
+#########################################################
   def create
     email = params[:user][:email]
     password = params[:user][:password]
@@ -7,19 +9,27 @@ class V1::SessionsController < ApplicationController
 
     if @user
       log_in!(@user)
-      render "v1/users/show"
+      render json: {
+        logged_in: true,
+        user: current_user
+        }
+
     else
-      render json: ["error"], status: 401
+      render json: {error: 401}
     end
   end
+
 
   def destroy
     @user = current_user
     if @user
       log_out!
-      render "v1/users/show"
+      render json: {
+        status: 200,
+        logged_out: true,
+        }
     else
-      render json: ["No current user"], status: 404
+      render json: { error: "No current user"}, status: 404
     end
   end
 

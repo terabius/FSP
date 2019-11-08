@@ -1,10 +1,8 @@
 class V1::UsersController < ApplicationController
-
-
-
+  
   def create
     @user = User.new(user_params)
-
+    
     # HARD CODED FEATURE NEEDS TO BE IMPLEMENTED 
     ###################################################################################################
     @user.state = 'CA'
@@ -12,25 +10,29 @@ class V1::UsersController < ApplicationController
     ####################################################################################################
     if @user.save
       log_in!(@user)
-      render "v1/users/show"
+      render json: {
+        status: :created,
+        user: @user
+        }
+
     else
-      render json: @user.errors.full_messages
+    render json: @user.errors.full_messages
     end
   end
 
   def show
-    # @user = User.find(params[:id])
+    @user = User.find(params[:id])
   end
-  
+
   def edit
     @user = User.find(params[:id])
-    render "v1/users/show"
+    render json: {edit:'from edit'}
   end
 
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      render "v1/users/show"
+      render json: {edit:'from edit'}
     else
       render json: @user.errors.full_messages
     end
