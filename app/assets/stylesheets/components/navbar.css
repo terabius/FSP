@@ -11,9 +11,8 @@
 
 .flex-item-navbar{
     display: flex;
+    align-self: center;
     justify-content: space-between;
-    margin:24px;
-
 }
 
 
@@ -32,6 +31,6 @@ flex: 1 0 auto;
 /* right  */
 
 .item-right-nav{  
-flex: 0 0 50%;
+    flex: 0 0 auto%;
 }
 
