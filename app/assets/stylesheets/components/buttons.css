@@ -7,11 +7,12 @@
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: #1EDD88;
+  background:  rgb(22, 82, 240);
   transition: background 0.3s ease;
+  text-decoration: none;
 }
 
 .btn-flat:hover {
-  background: #1BCB7F;
-  color: white;
+  background: white;
+  color: rgb(39, 37, 37);
 }

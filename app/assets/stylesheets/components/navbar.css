@@ -6,7 +6,14 @@
     min-height: 12vh;
     
 }
+.logo{
+    color:white;
+    font-weight: bolder;
+    font-size:25px;
+    font-family: 'ZCOOL KuaiLe', cursive;
+    margin-right:68px;
 
+}
 /* child element of the nav */
 
 .flex-item-navbar{
@@ -26,6 +33,7 @@ flex: 0 0 auto;
 
 .item-center-nav{    
 flex: 1 0 auto;
+justify-content: flex-start;
 }
 
 /* right  */
@@ -34,3 +42,19 @@ flex: 1 0 auto;
     flex: 0 0 auto;
 }
 
+.anchor{
+    font-size:20px;
+    margin-right: 10px;
+    font-weight: 200;
+    color:white;
+    text-decoration: none;
+}
+.anchor:hover{
+    font-weight: 200;
+    color:rgb(221, 218, 218);
+    text-decoration: none;
+}
+
+.mid{
+    padding-right:30px;
+}

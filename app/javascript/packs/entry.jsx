@@ -12,9 +12,8 @@ import App from '../components/App'
 document.addEventListener('DOMContentLoaded', () => {
   let start;
   // let store;
-  console.log(window.currentUse);
   if (window.currentUser) {
-    console.log('in');
+    
     const { currentUser } = window;
     const { id } = currentUser;
     start  = {currentUser , id};
@@ -31,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     delete window.currentUser;
 
   } else {
-    console.log('out');
     start = {currentUser:null};
     // store = configureStore();
   }
