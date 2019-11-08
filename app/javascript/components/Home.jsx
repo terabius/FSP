@@ -25,20 +25,19 @@ export default class Home extends Component {
     }
     render() {
         return (
-            <div>
+            <React.Fragment>
             <Navbar />
             <div>
-            <h1 className="megatitle">Buy and sell cryptocurrency</h1>
-            <h2 className="subtitle">Coinbase is the easiest place to buy, sell, and manage your cryptocurrency portfolio.</h2>
-            <div className="email-group">
+                <h1 className="megatitle">Buy and sell cryptocurrency</h1>
+                <h2 className="subtitle">Coinbase is the easiest place to buy, sell, and manage your cryptocurrency portfolio.</h2>
             
-            <input className="email-input" type="text" placeholder="Email address" />
-            <button name="button" type="submit" className="btn btn-flat green">
-             Get Started
-            </button>
-            </div>
-            
-            
+                <div className="email-group">
+                    <input className="email-input" type="text" placeholder="Email address" />
+                    <button name="button" type="submit" className="btn btn-flat green">
+                    Get Started
+                    </button>
+                </div>
+
             </div>
             {/* <button onClick={()=>this.handleLogoutClick()}>Log out</button> */}
             <BrowserRouter>
@@ -53,7 +52,7 @@ export default class Home extends Component {
             render={(props) => <Login handleSuccess={this.handleSuccess} />} />
             </Switch>
             </BrowserRouter>
-            </div>
+            </React.Fragment>
             )
         }
     }
