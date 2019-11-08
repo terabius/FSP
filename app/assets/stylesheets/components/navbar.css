@@ -3,7 +3,7 @@
 .flex-container-navbar{
     display: flex;
     justify-content: space-between;
-    min-height: 12vh;
+    min-height: 8vh;
     
 }
 .logo{

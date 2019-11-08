@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
     start = {currentUser:null};
     // store = configureStore();
   }
-
   //creating my root div with id root 
   const root = document.createElement('div');
   root.setAttribute("id", "root");
