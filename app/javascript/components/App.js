@@ -25,6 +25,21 @@ class App extends React.Component {
     })
   }
 
+// this keeps the user logged in even if refresh
+
+  checkLoginStatus(){
+    if(this.props.store.currentUser){
+      this.setState({
+        loggedInStatus: "LOGGED_IN",
+        user: this.props.store.currentUser
+      })
+    }
+  }
+
+  componentDidMount(){
+    this.checkLoginStatus();
+  }
+
 
   render() {
     return (

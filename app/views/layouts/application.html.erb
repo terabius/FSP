@@ -8,6 +8,12 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'entry' %>
+    <% if logged_in? %>
+  <script type="text/javascript">
+      window.currentUser =
+        <%= (current_user.to_json).html_safe %>
+  </script>
+<% end %>
   </head>
 
   <body>

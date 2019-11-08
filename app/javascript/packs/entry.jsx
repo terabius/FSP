@@ -5,37 +5,43 @@
 import { } from 'jquery-ujs'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import configureStore from '../store/configureStore'
+// import configureStore from '../store/configureStore'
 import App from '../components/App'
 
 
 document.addEventListener('DOMContentLoaded', () => {
-
-  let store;
+  let start;
+  // let store;
+  console.log(window.currentUse);
   if (window.currentUser) {
+    console.log('in');
     const { currentUser } = window;
     const { id } = currentUser;
-    const preloadedState = {
-      entities: {
-        users: {
-          [id]: currentUser
-        }
-      },
-      session: { id }
-    };
-    store = configureStore(preloadedState);
+    start  = {currentUser , id};
+    // const preloadedState = {
+    //   entities: {
+    //     users: {
+    //       [id]: currentUser
+    //     }
+    //   },
+    //   session: { id }
+    // };
+    // store = configureStore(preloadedState);
 
     delete window.currentUser;
 
   } else {
-    store = configureStore();
+    console.log('out');
+    start = {currentUser:null};
+    // store = configureStore();
   }
 
   //creating my root div with id root 
   const root = document.createElement('div');
   root.setAttribute("id", "root");
+
   ReactDOM.render(
-    <App store={store}/>,
+    <App store={start}/>,
     document.body.appendChild(root),
   )
 })

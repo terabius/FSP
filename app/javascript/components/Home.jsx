@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import Registration from './auth/Registration';
+import Registration from './auth/Registration'
+import Login from "./auth/Login"
 
 export default class Home extends Component {
     
@@ -19,6 +20,7 @@ export default class Home extends Component {
             <h1>Home</h1> 
             <h1> status: {this.props.status} </h1>
             <Registration handleSuccess={this.handleSuccess}/>
+            <Login handleSuccess={this.handleSuccess} />
             </div>
             )
         }
