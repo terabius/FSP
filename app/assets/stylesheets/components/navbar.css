@@ -1,0 +1,37 @@
+/* structure of the nav */
+
+.flex-container-navbar{
+    display: flex;
+    justify-content: space-between;
+    min-height: 12vh;
+    
+}
+
+/* child element of the nav */
+
+.flex-item-navbar{
+    display: flex;
+    justify-content: space-between;
+    margin:24px;
+
+}
+
+
+/* left */
+
+.item-left-nav{
+flex: 0 0 auto;
+}
+
+/* center  */
+
+.item-center-nav{    
+flex: 1 0 auto;
+}
+
+/* right  */
+
+.item-right-nav{  
+flex: 0 0 50%;
+}
+
