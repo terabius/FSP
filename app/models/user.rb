@@ -1,7 +1,12 @@
 class User < ApplicationRecord
 
+    # TODO : 
+    # Add inclusion on states and read_conditions boolean
+    # validats presences of read_conditions
+    
   validates :email, uniqueness: true
-  validates :first_name,:last_name,:email,:state,:read_conditions, presence: true
+  validates :first_name,:last_name,:email,:state, presence: true
+
   validates :password, length: { minimum: 6 }, allow_nil: true
 
   before_validation :ensure_session_token
