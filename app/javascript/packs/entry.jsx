@@ -15,17 +15,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const { currentUser } = window;
     const { id } = currentUser;
     const preloadedState = {
-      entitities: {
+      entities: {
         users: {
           [id]: currentUser
         }
-      }
+      },
       session: { id }
     };
     store = configureStore(preloadedState);
 
-    // Clean up after ourselves so we don't accidentally use the
-    // global currentUser instead of the one in the store
     delete window.currentUser;
 
   } else {
@@ -34,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //creating my root div with id root 
   const root = document.createElement('div');
-  root.setAttribute("id", "root")  
+  root.setAttribute("id", "root");
   ReactDOM.render(
     <App store={store}/>,
     document.body.appendChild(root),

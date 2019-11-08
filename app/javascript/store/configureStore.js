@@ -1,25 +1,10 @@
 import {createStore, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
+import rootReducer from '../reducers/root_reducer';
 
 
-const initialState = {
-    things: [
-        {
-            name: 'test',
-            guid: '33'
-        }
-    ]
-};
-
-function rootReducer(state, action){
-    console.log(action.type);
-    switch(action.type){
-        default:
-            return state;
-    }
-}
-
-export default function configureStore(){
+export default function configureStore(initialState= {}){
     const store = createStore(rootReducer, initialState, applyMiddleware(thunk));
     return store;
 }
+

@@ -1,0 +1,4 @@
+{
+    status: :create,
+    user: @user
+}
