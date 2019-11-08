@@ -8,8 +8,8 @@ export default class Registration extends Component {
             first_name:'',
             last_name: '',
             email:'',
-            password:'',
-            registrationErrors:''
+            password:''
+            // registrationErrors:''
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -48,9 +48,9 @@ export default class Registration extends Component {
                         placeholder="last_name"
                         defaultValue={this.state.last_name} onChange={this.handleChange} required />
 
-                    <input type="Email"
-                        name="Email"
-                        placeholder="Email"
+                    <input type="email"
+                        name="email"
+                        placeholder="email"
                         defaultValue={this.state.email} onChange={this.handleChange} required />
 
                     <input type="password"

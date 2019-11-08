@@ -1,4 +1,4 @@
 {
-    status: :create,
-    user: @user
+    status: 'create',
+
 }

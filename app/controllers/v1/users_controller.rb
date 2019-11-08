@@ -1,7 +1,15 @@
 class V1::UsersController < ApplicationController
 
+
+
   def create
     @user = User.new(user_params)
+
+    # HARD CODED FEATURE NEEDS TO BE IMPLEMENTED 
+    ###################################################################################################
+    @user.state = 'CA'
+    @user.read_conditions = true
+    ####################################################################################################
     if @user.save
       log_in!(@user)
       render "v1/users/show"
@@ -11,7 +19,7 @@ class V1::UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    # @user = User.find(params[:id])
   end
   
   def edit
@@ -30,7 +38,7 @@ class V1::UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:email, :password)
+    params.require(:user).permit(:first_name,:last_name,:email, :password)
   end
 
 end
