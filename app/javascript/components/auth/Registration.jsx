@@ -51,27 +51,37 @@ export default class Registration extends Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
+                    <div className="form-title-flex">
+                        <h2 className='form-title'>Join Groinbase:</h2>
+                    </div>
 
-                    <input type="text" 
+                    <div className="forms">
+                    <input type="text"
+                        className='flex-item-login'
                         name="first_name" 
                         placeholder="first_name" 
                         defaultValue={this.state.first_name} onChange={this.handleChange} required />
                     
                     <input type="text"
+                        className='flex-item-login'
                         name="last_name"
                         placeholder="last_name"
                         defaultValue={this.state.last_name} onChange={this.handleChange} required />
 
                     <input type="email"
+                        className='flex-item-login'
                         name="email"
                         placeholder="email"
                         defaultValue={this.state.email} onChange={this.handleChange} required />
 
                     <input type="password"
+                        className='flex-item-login'
                         name="password"
                         placeholder="password"
                         defaultValue={this.state.passowrd} onChange={this.handleChange} required />
-                        <button type='submit'>Register</button>
+                        <button className='btn btn-flat'
+                        type='submit'>Register</button>
+                    </div>
                 </form>
             </div>
         )
