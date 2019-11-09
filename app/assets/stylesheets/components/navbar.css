@@ -12,6 +12,7 @@
     font-size:25px;
     font-family: 'ZCOOL KuaiLe', cursive;
     margin-right:68px;
+       text-decoration: none      !important;
 
 }
 /* child element of the nav */

@@ -27,22 +27,13 @@ export default class Home extends Component {
     render() {
         return (
             <React.Fragment>
-            <Navbar />
+
             <HookHome />
-            
+            {/* <Navbar />
+            <HookHome />
+             */}
             {/* <button onClick={()=>this.handleLogoutClick()}>Log out</button> */}
-            <BrowserRouter>
-            <Switch>
-            <Route
-            exact
-            path='/signup'
-            render={(props) => <Registration handleSuccess={this.handleSuccess} />} />
-            <Route
-            exact
-            path='/signin'
-            render={(props) => <Login handleSuccess={this.handleSuccess} />} />
-            </Switch>
-            </BrowserRouter>
+
             </React.Fragment>
             )
         }
