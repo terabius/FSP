@@ -15,7 +15,6 @@ class App extends React.Component {
       loggedInStatus: "NOT_LOGGED_IN",
       user: {}
     }
-    
     this.handleLogin = this.handleLogin.bind(this);
     this.handleLogout= this.handleLogout.bind(this);
   }
@@ -48,7 +47,8 @@ class App extends React.Component {
   componentDidMount(){
     this.checkLoginStatus();
   }
-  
+
+
   
   render() {
     return (
@@ -76,11 +76,12 @@ class App extends React.Component {
         exact
         path='/signin'
         render={(props) => <Login handleSuccess={this.handleSuccess} />} /> 
+       
         
         <Route
-        exact
         path='/dashboard'
-        render={(props) => (<Dashboard {...props} status={this.state.loggedInStatus} />)} />
+        component={Dashboard} />
+        {/* render={(props) => (<Dashboard {...props} status={this.state.loggedInStatus} />)} /> */}
                 
         </Switch>
         </div>
@@ -90,7 +91,8 @@ class App extends React.Component {
         );
       }
     }
-    
+  
+
     export default App
     
     

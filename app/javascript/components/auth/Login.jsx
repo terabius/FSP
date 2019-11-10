@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Redirect} from 'react-router-dom'
 // import { signup } from '../../util/session_v1_util';
 
 export default class Login extends Component {
@@ -27,6 +28,7 @@ export default class Login extends Component {
         .then(r => {
             console.log(r);
             if (r.logged_in) {
+                console.log('there'); 
                 this.props.handleSuccess(r.user);
             }
         });
@@ -70,7 +72,6 @@ export default class Login extends Component {
             <button type='submit' className='btn btn-flat'>
                 Login
             </button>
-
 
             </div>
             </form>
