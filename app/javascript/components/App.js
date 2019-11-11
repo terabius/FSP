@@ -1,7 +1,7 @@
 import React from "react"
 import { Switch, Route} from "react-router-dom"
 
-import {AuthRoute} from '../util/route_util'
+import {AuthRoute, ProtectedRoute} from '../util/route_util'
 
 import Home from './Home'
 import Navbar from './navbar'
@@ -16,6 +16,7 @@ export default function App() {
       <Switch>
         <AuthRoute path='/signup' component={Registration} />
         <AuthRoute path='/signin' component={Login} />
+        {/* <ProtectedRoute /> */}
         <Route exact path='/' component={Home} />
       </Switch>
     </React.Fragment>          

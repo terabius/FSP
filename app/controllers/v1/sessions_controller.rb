@@ -1,7 +1,5 @@
 class V1::SessionsController < ApplicationController
 
-  ##need to rework to protect destroy method 
-#########################################################
   def create
     email = params[:user][:email]
     password = params[:user][:password]
@@ -9,10 +7,7 @@ class V1::SessionsController < ApplicationController
 
     if @user
       log_in!(@user)
-      render json: {
-        logged_in: true,
-        user: current_user
-        }
+      render json: @user.to_json(only: [:email,:first_name,:id,:last_name])
 
     else
       render json: {error: 401}

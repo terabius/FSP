@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-// import { signup } from '../../util/session_v1_util';
+import { signup } from '../../actions/session_actions'
 
 export default class Registration extends Component {
+
     constructor(props){
         super(props);
         this.state = {
@@ -14,37 +15,19 @@ export default class Registration extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
-// NEED TO CLEAN THIS . AJAX CALL IN THE . MIDDLE LOL
-// ***********************************************************************************************************************************************************************************
 
     handleSubmit(event) {
         console.log('submitted');
         event.preventDefault();
-        const user = this.state
-        $.ajax({
-            method: "POST",
-            url: `/v1/users`,
-            data: { user }
-        })
-        .then(r => { 
-            if(r.status === 'created'){
-                this.props.handleSuccess(r.user);
-            }
-        });
-        
+        const user = this.state;
+        store.dispatch(signup(user))
+        .then(()=> this.props.history.push('/'))
     }
 
     handleChange(event){
-        console.log('Changed', event);
         this.setState({
             [event.target.name]:event.target.value
         });
-    }
-
-// WHY THIS LINE 
-// ***********************************************************************************************************************************************************************************
-    componentDidMount(){
-        console.log('mont')
     }
 
     render() {

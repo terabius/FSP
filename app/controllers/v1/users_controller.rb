@@ -10,13 +10,9 @@ class V1::UsersController < ApplicationController
     ####################################################################################################
     if @user.save
       log_in!(@user)
-      render json: {
-        status: :created,
-        user: @user
-        }
-
+      render json: @user.to_json(only: [:email,:first_name,:id,:last_name])
     else
-    render json: @user.errors.full_messages
+      render json: @user.errors.full_messages
     end
   end
 

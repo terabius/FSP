@@ -19,7 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
-  
+
+  window.store = store;
   //creating my root div with id root 
   const root = document.createElement('div');
   root.setAttribute("id", "root");

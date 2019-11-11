@@ -1,8 +1,8 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {Link, Redirect} from 'react-router-dom'
 
 
-export default function NavbarModule({currentUser, logout}) {
+export default function NavbarModule({currentUserId, logout}) {
 
     const loggedOut = () => (
         <>
@@ -22,7 +22,11 @@ export default function NavbarModule({currentUser, logout}) {
 
         </>
         );
-        
+       
+        const handleLogout = () => {
+            logout()
+                
+        }
 
 
         const loggedIn = () => (
@@ -34,7 +38,7 @@ export default function NavbarModule({currentUser, logout}) {
                 </div>
                 <div className="flex-item-navbar item-right-nav">
                     <div>
-                        <button onClick={logout}>Logout</button>
+                        <button onClick={handleLogout}>Logout</button>
                     </div>
                 </div>
 
@@ -45,7 +49,7 @@ export default function NavbarModule({currentUser, logout}) {
 
         );
             
-    return currentUser ? loggedIn() : loggedOut();
+    return currentUserId ? loggedIn() : loggedOut();
 }
         
         
