@@ -9,8 +9,9 @@ const walletsReducer = (oldState = {}, action) => {
             
             return Object.assign({}, oldState, { wallets: action.payload.wallets });
 
-        // case LOGOUT_CURRENT_USER:
-        // return Object.assign({},oldState, {user:null} )
+        case LOGOUT_CURRENT_USER:
+            return Object.assign({},oldState, {user:null} )
+            
         default:
             return oldState;
     }

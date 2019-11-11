@@ -1,16 +1,15 @@
 import { RECEIVE_CURRENT_USER } from '../actions/session_actions'
-// import {LOGOUT_CURRENT_USER} from '../actions/session_actions'
+import {LOGOUT_CURRENT_USER} from '../actions/session_actions'
 
-// 
+
 const assetsReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
 
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
             return Object.assign({}, oldState, { assets: action.payload.assets });
-
-        // case LOGOUT_CURRENT_USER:
-        // return Object.assign({},oldState, {user:null} )
+        case LOGOUT_CURRENT_USER:
+            return Object.assign({},oldState, {user:null} )
         default:
             return oldState;
     }
