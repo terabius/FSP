@@ -10,13 +10,13 @@ export default function Price() {
 
             <div className="price-tableau">
             <div className="price-header">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div> 
+                    <div>#</div>
+                    <div>Name</div>
+                    <div>Price</div>
+                    <div>Change</div>
+                    <div>Market Cap</div>
+                    <div>Trade</div>
+                    <div>Follow</div> 
             </div>
 
                 <PriceItem />
