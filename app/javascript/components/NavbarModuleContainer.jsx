@@ -5,7 +5,7 @@ import NavbarModule from './NavbarModule'
 
 
 const mapStateToProps = (state) => ({
-    currentUser: state.currentUser
+    currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = (dispatch) => ({
