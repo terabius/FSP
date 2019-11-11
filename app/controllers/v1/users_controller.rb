@@ -10,11 +10,23 @@ class V1::UsersController < ApplicationController
     ####################################################################################################
     if @user.save
       log_in!(@user)
+
+      a = Assets.new
+      a.getAssets
+
+      
       render json: @user.to_json(only: [:email,:first_name,:id,:last_name])
     else
       render json: @user.errors.full_messages
     end
   end
+
+
+
+
+
+
+
 
   def show
     @user = User.find(params[:id])
