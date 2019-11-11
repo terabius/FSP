@@ -8,7 +8,7 @@ import Navbar from './navbar'
 import Login from './auth/Login'
 import Registration from './auth/Registration'
 import DashboardContainer from "./dashboard/DashboardContainer"
-import Price from './price/Price'
+import PriceContainer from "./price/PriceContainer"
 
 export default function App() {
   return (
@@ -19,7 +19,7 @@ export default function App() {
         <AuthRoute path='/signup' component={Registration} />
         <AuthRoute path='/signin' component={Login} />
         <ProtectedRoute path='/dashboard' component={DashboardContainer} />
-        <ProtectedRoute path='/price' component={Price} /> 
+        <ProtectedRoute path='/price' component={PriceContainer} /> 
         <AuthRoute exact path='/' component={Home} />
       </Switch>
     </React.Fragment>          

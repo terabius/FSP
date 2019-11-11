@@ -1,16 +1,16 @@
 import React from 'react'
 
-export default function PriceItem() {
+export default function PriceItem(props) {
     return (
         <>
             <div className="price-item">
-                <div>number</div>
-                <div>name</div>
-                <div>price</div>
-                <div>change</div>
-                <div>Market cap</div>
-                <div>trade btn</div>
-                <div>follow star</div> 
+                <div>{props.number}</div>
+                <div>{props.name}</div>
+                <div>{props.price}</div>
+                <div>{props.changer}</div>
+                <div>{props.market}</div>
+                <div>{props.trade}</div>
+                <div>{props.follow}</div> 
             </div>
         </>
     )

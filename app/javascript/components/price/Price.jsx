@@ -1,7 +1,7 @@
 import React from 'react'
 import PriceItem from './PriceItem'
 
-export default function Price() {
+export default function Price({assets}) {
     return (
         <>
             <div className="search-bar">
@@ -9,7 +9,7 @@ export default function Price() {
             </div>
 
             <div className="price-tableau">
-            <div className="price-header">
+                <div className="price-header">
                     <div>#</div>
                     <div>Name</div>
                     <div>Price</div>
@@ -17,13 +17,25 @@ export default function Price() {
                     <div>Market Cap</div>
                     <div>Trade</div>
                     <div>Follow</div> 
-            </div>
-
-                <PriceItem />
+                </div>  
+                <div>
+                    {ren(assets)}
+                </div>
             </div>
         </>
     )
 }
 
 
-  
+const ren = (assets) => {   
+        return assets.assets.map((el, idx) => {
+        return (<PriceItem
+            number={idx}
+            name={el.name}
+            price={el.quote.USD.price}
+            change={el.quote.USD.percent_change_24h}
+            market={el.quote.USD.market_cap}
+        />)
+    }
+    )
+}
