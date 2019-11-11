@@ -24,8 +24,7 @@ export default function NavbarModule({currentUserId, logout}) {
         );
        
         const handleLogout = () => {
-            logout()
-            
+            logout()            
         }
 
 

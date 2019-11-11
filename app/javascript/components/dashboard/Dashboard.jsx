@@ -1,7 +1,8 @@
 import React from 'react'
 import Card from './Card'
 
-const Dashboard = props => {
+const Dashboard = ({wallets}) => {
+
     return (
         <React.Fragment>
             <div className="dash-container">
