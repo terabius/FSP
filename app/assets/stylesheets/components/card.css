@@ -1,0 +1,19 @@
+.card-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-sub-info{
+    display: flex;
+    justify-content: space-between;
+    flex:0 0 10%;    
+}
+
+.card-chart{
+    flex:0 0 80%;
+}

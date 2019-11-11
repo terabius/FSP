@@ -1,0 +1,25 @@
+.dash-container{
+    display: flex;
+    flex-direction: column;
+    min-width:100%;
+    min-height: 450px;
+    margin:20px 0px;
+}
+
+.dash-title{
+    flex: 0 0 10%;
+    margin:0px 0px 0px 0px;
+    font-size:30px;
+    border: 1px solid grey;
+}
+
+.dash-kid{
+    display: flex;
+    flex: 1 0 50%;
+    border: 1px solid grey;
+}
+
+.crypto-view{
+    flex: 1 0 auto;
+    border: 1px solid grey;
+}
