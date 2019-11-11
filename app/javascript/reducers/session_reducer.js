@@ -5,7 +5,7 @@ const _nullUser = {
 const sessionReducer = (state = _nullUser, action) => {
     switch (action.type) {
         case "RECEIVE_CURRENT_USER":
-            const { id } = action.currentUser;
+            const { id } = action.payload.users;
             return Object.assign({}, { id });
         case "LOGOUT":
             return _nullUser;

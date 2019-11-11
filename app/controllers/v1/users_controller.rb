@@ -11,7 +11,7 @@ class V1::UsersController < ApplicationController
     ####################################################################################################
     if @user.save
       log_in!(@user)
-      render json: @user.to_json(only: [:email,:first_name,:id,:last_name]) 
+      render :create 
     else
       render json: @user.errors.full_messages
     end

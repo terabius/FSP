@@ -6,9 +6,9 @@ export const LOGOUT_CURRENT_USER = "LOGOUT_CURRENT_USER";
 export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
 
 // action creators
-const receiveCurrentUser = currentUser => ({
+const receiveCurrentUser = payload => ({
     type: RECEIVE_CURRENT_USER,
-    currentUser
+    payload
 });
 
 const logoutCurrentUser = () => ({
@@ -24,7 +24,7 @@ const receiveErrors = errors => ({
 export const signup = user => dispatch => (
     SessionAPIUtil.signup(user)
     .then(
-        user => (dispatch(receiveCurrentUser(user))),
+        payload => (dispatch(receiveCurrentUser(payload))),
         err => (dispatch(receiveErrors(err.responseJSON)))
     )
 );
