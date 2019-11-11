@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link, Redirect} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 
 export default function NavbarModule({currentUserId, logout}) {
@@ -25,7 +25,7 @@ export default function NavbarModule({currentUserId, logout}) {
        
         const handleLogout = () => {
             logout()
-                
+            
         }
 
 
@@ -38,7 +38,7 @@ export default function NavbarModule({currentUserId, logout}) {
                 </div>
                 <div className="flex-item-navbar item-right-nav">
                     <div>
-                        <button onClick={handleLogout}>Logout</button>
+                        <button className='btn btn-flat' onClick={handleLogout}>Logout</button>
                     </div>
                 </div>
 

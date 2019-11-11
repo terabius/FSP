@@ -2,10 +2,10 @@ import React from 'react'
 
 const Dashboard = props => {
     return (
-        <div>
+        <React.Fragment>
             <h1>Dashboard</h1>
-            <h1>status: {props.status}</h1>
-        </div>
+            {/* <p>status: {store.getState()}</p> */}
+        </React.Fragment>
     );
 }
 

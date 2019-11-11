@@ -21,7 +21,7 @@ export default class Registration extends Component {
         event.preventDefault();
         const user = this.state;
         store.dispatch(signup(user))
-        .then(()=> this.props.history.push('/'))
+        .then(()=> this.props.history.push('/dashboard'))
     }
 
     handleChange(event){

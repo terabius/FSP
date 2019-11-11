@@ -7,6 +7,7 @@ import Home from './Home'
 import Navbar from './navbar'
 import Login from './auth/Login'
 import Registration from './auth/Registration'
+import Dashboard from './Dashboard'
 
 export default function App() {
   return (
@@ -16,8 +17,8 @@ export default function App() {
       <Switch>
         <AuthRoute path='/signup' component={Registration} />
         <AuthRoute path='/signin' component={Login} />
-        {/* <ProtectedRoute /> */}
-        <Route exact path='/' component={Home} />
+        <ProtectedRoute path='/dashboard' component={Dashboard} />
+        <AuthRoute exact path='/' component={Home} />
       </Switch>
     </React.Fragment>          
   )
