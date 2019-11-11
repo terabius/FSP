@@ -1,0 +1,22 @@
+.search-bar{
+ display: flex;
+}
+
+.input-search{
+    min-width: 100%;
+    margin: 40px 10px;
+    height: 50px;
+}
+.price-tableau{
+    display: flex;
+    flex-direction: column;
+}
+
+.price-header{
+
+}
+
+.price-item{
+    display: flex;
+    justify-content: space-between;
+}
