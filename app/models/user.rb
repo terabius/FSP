@@ -10,7 +10,10 @@ class User < ApplicationRecord
   validates :password, length: { minimum: 6 }, allow_nil: true
 
   before_validation :ensure_session_token
-
+  has_many :coins, through: :watchlist 
+  has_one :watchlist , dependent: :destroy
+  before_create :create_watchlist
+  
   attr_reader :password
 
   def self.find_by_credentials(email, password)
@@ -40,4 +43,10 @@ class User < ApplicationRecord
   def ensure_session_token
     self.session_token ||= generate_session_token
   end
+
+  private
+  def create_watchlist
+    watchlist = build_watchlist()
+  end
+
 end
