@@ -10,7 +10,7 @@ class Watchlist < ApplicationRecord
     def create_coin
         STARTERS_SYM.each do |sym|
             c = Coin.create!(name: sym, watchlist_id: self.id) 
-            p 'done'
+        
         end
     end
 end

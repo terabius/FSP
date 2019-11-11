@@ -12,6 +12,9 @@ end
 fetch_assets = Assets.new
 response = fetch_assets.getAssets
 
+
+
+
 json.set! :assets do 
-    json.merge! response
+    json.merge! response["data"]
 end

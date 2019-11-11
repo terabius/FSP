@@ -6,20 +6,19 @@ import Root from '../components/Root'
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
-
-  if (window.currentUser) {
-    const preloadedState = {
-      session: { id: window.currentUser.id },
-      entities: {
-        users: { [window.currentUser.id]: window.currentUser }
-      }
-    };
-    store = configureStore(preloadedState);
-    delete window.currentUser;
-  } else {
-    store = configureStore();
-  }
-
+  // if (window.currentUser) {
+  //   const preloadedState = {
+  //     session: { id: window.currentUser.id },
+  //     entities: {
+  //       users: { [window.currentUser.id]: window.currentUser }
+  //     }
+  //   };
+  //   store = configureStore(preloadedState);
+  //   delete window.currentUser;
+  // } else {
+  //   store = configureStore();
+  // }
+  store=configureStore();
   window.store = store;
   //creating my root div with id root 
   const root = document.createElement('div');

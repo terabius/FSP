@@ -1,7 +1,7 @@
 class Assets
 
     def getAssets
-        link = 'https://api.domainsdb.info/v1/domains/search?domain=facebook&zone=com'
+        link = 'https://raw.githubusercontent.com/bppandre/apitest/master/crypto.json'
         response = RestClient::Request.execute(
         method: :get,
         url: link
