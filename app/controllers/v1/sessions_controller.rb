@@ -7,7 +7,7 @@ class V1::SessionsController < ApplicationController
 
     if @user
       log_in!(@user)
-      render json: @user.to_json(only: [:email,:first_name,:id,:last_name])
+      render :create
 
     else
       render json: {error: 401}

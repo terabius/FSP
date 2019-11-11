@@ -19,7 +19,7 @@ export default function Price({assets}) {
                     <div>Follow</div> 
                 </div>  
                 <div>
-                    {ren(assets)}
+                    {renderRow(assets)}
                 </div>
             </div>
         </>
@@ -27,9 +27,10 @@ export default function Price({assets}) {
 }
 
 
-const ren = (assets) => {   
+const renderRow = (assets) => {   
         return assets.assets.map((el, idx) => {
         return (<PriceItem
+            key={idx}
             number={idx}
             name={el.name}
             price={el.quote.USD.price}
