@@ -7,7 +7,7 @@ export default function PriceItem(props) {
                 <div>{props.number}</div>
                 <div>{props.name}</div>
                 <div>{props.price}</div>
-                <div>{props.changer}</div>
+                <div>{props.change}</div>
                 <div>{props.market}</div>
                 <div>{props.trade}</div>
                 <div>{props.follow}</div> 
