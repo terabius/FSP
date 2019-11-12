@@ -7,6 +7,8 @@ const walletsReducer = (oldState = {}, action) => {
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
             return Object.assign({}, oldState, action.payload.wallets );
+            
+
         // case LOGOUT_CURRENT_USER:
         //     return Object.assign({},oldState, {wallets:null} )
             
