@@ -23,16 +23,16 @@ const receiveCoinErrors = (err) => ({
 
 //Thunk 
 
-export const add = coinSymbol = dispatch => (
+export const add = (coinSymbol) => dispatch => (
     WalletsAPIUtil.addCoin(coinSymbol)
     .then( coin => dispatch(addCoin(coin)),
            err => dispatch(receiveCoinErrors(err))
         )
 );
 
-export const remove = coinId = dispatch => (
+export const remove = (coinId)=> dispatch => (
     WalletsAPIUtil.removeCoin(coinId)
-        .then( coin => dispatch(addCoin(coin)),
+        .then( coin => dispatch(removeCoin(coin)),
                err => dispatch(receiveCoinErrors(err))
         )
 );
