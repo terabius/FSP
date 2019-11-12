@@ -4,6 +4,11 @@ import {ADD_COIN,REMOVE_COIN} from '../actions/wallets_actions'
 const walletsReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
 
+    Object.filter = (obj, predicate) =>
+        Object.keys(obj)
+            .filter(key => predicate(obj[key]))
+            .reduce((res, key) => (res[key] = obj[key], res), {});
+
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
             return Object.assign({}, oldState, action.payload.wallets );
@@ -11,10 +16,14 @@ const walletsReducer = (oldState = {}, action) => {
         case ADD_COIN:
             return Object.assign({}, oldState, action.coin);
         case REMOVE_COIN:
-            console.log(action.coinId); /////////////////////////////////////////////////////////////NEED TO FIND A WAY TO DELETE
-            return Object.assign({}, oldState, {
-                wallets : [...state.wallets.filter(coin => coin.id !== action.coinId)]
-            });
+            console.log(action.coinSym); /////////////////////////////////////////////////////////////NEED TO FIND A WAY TO DELETE
+            console.log(oldState);
+            const newState = Object.assign({}, 
+                Object.filter( oldState, coin => coin.name !== action.coinSym)
+                );
+            console.log(newState);
+            return newState
+
         // case LOGOUT_CURRENT_USER:
         //     return Object.assign({},oldState, {wallets:null} )
             
@@ -24,3 +33,5 @@ const walletsReducer = (oldState = {}, action) => {
 }
 
 export default walletsReducer
+
+

@@ -11,9 +11,9 @@ const addCoin = (coin) => ({
     coin
 });
 
-const removeCoin = (coinId) => ({
+const removeCoin = (coinSym) => ({
     type: REMOVE_COIN,
-    coinId
+    coinSym
 });
 
 const receiveCoinErrors = (err) => ({
@@ -32,7 +32,8 @@ export const add = (coinSymbol) => dispatch => (
 
 export const remove = (coinId)=> dispatch => (
     WalletsAPIUtil.removeCoin(coinId)
-        .then( coin => dispatch(removeCoin(coin)),
+    // .then(r=>console.log(r))
+        .then( coinSym => dispatch(removeCoin(coinSym)),
                err => dispatch(receiveCoinErrors(err))
         )
 );

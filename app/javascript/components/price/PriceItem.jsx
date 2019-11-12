@@ -10,11 +10,11 @@ export default class PriceItem extends Component {
 
     handleFollow(event){
 
-        console.log(this.props.symbol);
-        console.log(event.target);
+        // console.log(this.props.symbol);
+        // console.log(event.target);
         
         if(Object.keys(this.props.wallets).includes(this.props.symbol)){
-            console.log(this.props.wallets[this.props.symbol].id);
+            // console.log(this.props.wallets[this.props.symbol].id);
             store.dispatch(remove(this.props.wallets[this.props.symbol].id));
             event.target.style.color = 'black';
         }
