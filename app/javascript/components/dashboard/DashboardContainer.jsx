@@ -2,7 +2,7 @@ import {connect} from 'react-redux'
 import Dashboard from './Dashboard'
 
 const mapStateToProps = (state) => ({
-    wallets: state.entities.wallets.wallets
+    wallets: state.entities.wallets
 });
 
 const mapDispatchToProps = (dispatch) => ({

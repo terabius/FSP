@@ -10,7 +10,7 @@ class V1::CoinsController < ApplicationController
     new_coin.watchlist_id = current_user.watchlist.id
 
     if new_coin.save
-      render json: {status:200}
+      render :create
     else
       render json: {status:-1}
     end

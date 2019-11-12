@@ -1,7 +1,7 @@
 import React from 'react'
 import PriceItem from './PriceItem'
 
-export default function Price({assets}) {
+export default function Price({assets, handleFollow}) {
     return (
         <>
             <div className="search-bar">
@@ -19,7 +19,7 @@ export default function Price({assets}) {
                     <div>Follow</div> 
                 </div>  
                 <div>
-                    {renderRow(assets)}
+                    {renderRow(assets, handleFollow)}
                 </div>
             </div>
         </>
@@ -37,6 +37,7 @@ const renderRow = (assets) => {
             price={el.quote.USD.price}
             change={el.quote.USD.percent_change_24h}
             market={el.quote.USD.market_cap}
+            symbol={el.symbol}
         />)
     })
 }

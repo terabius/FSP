@@ -1,5 +1,6 @@
 import {connect} from 'react-redux'
 import Price from './Price'
+import {add, remove} from '../../actions/wallets_actions'
 
 const mapStateToProps = (state) => ({
     assets: state.entities.assets

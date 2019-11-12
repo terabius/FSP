@@ -5,6 +5,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link href="https://fonts.googleapis.com/css?family=Sunshiney|ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/2af014eb75.js"></script>
+
     <%= favicon_link_tag asset_path('favicon.ico') %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -15,8 +17,7 @@
       window.currentUser =
         <%= (current_user.to_json).html_safe %>
   </script>
-
-<% end %>
+  <% end %>
   </head>
 
   <body>

@@ -9,7 +9,6 @@ import Login from './auth/Login'
 import Registration from './auth/Registration'
 import DashboardContainer from "./dashboard/DashboardContainer"
 import PriceContainer from "./price/PriceContainer"
-import Account from './Account'
 import AccountContainer from "./AccountContainer"
 
 export default function App() {

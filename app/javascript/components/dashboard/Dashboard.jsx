@@ -6,9 +6,7 @@ const Dashboard = ({wallets,logout}) => {
 
     return (
         <React.Fragment>
-            {window.logout}
-            {window.wallets}
-            {console.log(wallets)}
+            
             <div className="dash-container">
                 <div className="dash-title">Following</div>
                 <div className="dash-kid">
