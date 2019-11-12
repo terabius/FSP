@@ -18,9 +18,24 @@ export default class PriceItem extends Component {
         .then(res => console.log(res)); 
     }
 
+    star = () =>{
+        const followed = {
+            color: 'yellow',
+        };
+        const style = {
+            color: 'black',
+        }
+
+        if (this.props.wallet.includes(this.props.symbol)){
+            return followed;
+        }else{
+            return style;
+        }
+    }
+
     render() {
         return (
-            <>
+            <>  
                 <div className="price-item">
                     <div>{this.props.number}</div>
                     <div className='crypto-name'>{this.props.name}</div>
@@ -29,7 +44,7 @@ export default class PriceItem extends Component {
                     <div>{this.props.market}</div>
                     <div><button className='btn btn-flat' disabled>Trade</button></div>
                     <div>
-                        <i className="fa fa-3x fa-star" aria-hidden="true" onClick={this.handleFollow}></i>
+                        <i className="fa fa-3x fa-star" aria-hidden="true" style={this.star()} onClick={this.handleFollow}></i>
                     </div>
                 </div>
             </>

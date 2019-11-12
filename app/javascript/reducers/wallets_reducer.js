@@ -9,7 +9,7 @@ const walletsReducer = (oldState = {}, action) => {
             return Object.assign({}, oldState, action.payload.wallets );
             
         case ADD_COIN:
-            return Object.assign({}, oldState, {[action.coin.name]:coin});
+            return Object.assign({}, oldState, action.coin);
         case REMOVE_COIN:
             return Object.assign({}, oldState, { 
                 wallets : [...state.wallets.filter(coin => coin.name !== action.coinId)]

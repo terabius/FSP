@@ -7,7 +7,7 @@ class V1::CoinsController < ApplicationController
 
   def create
     @new_coin = Coin.new(coin_params)
-    @new_coin.watchlist_id = current_user.watchlist.id
+    @new_coin.watchlist_id = current_user.watchlist.id 
 
     if @new_coin.save
       render :create

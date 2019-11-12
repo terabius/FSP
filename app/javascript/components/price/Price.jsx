@@ -1,7 +1,7 @@
 import React from 'react'
 import PriceItem from './PriceItem'
 
-export default function Price({assets, handleFollow}) {
+export default function Price({assets, walletsSym}) {
     return (
         <>
             <div className="search-bar">
@@ -19,7 +19,7 @@ export default function Price({assets, handleFollow}) {
                     <div>Follow</div> 
                 </div>  
                 <div>
-                    {renderRow(assets, handleFollow)}
+                    {renderRow(assets,walletsSym)}
                 </div>
             </div>
         </>
@@ -27,7 +27,8 @@ export default function Price({assets, handleFollow}) {
 }
 
 
-const renderRow = (assets) => {
+const renderRow = (assets, walletsSym) => {
+
     const values = Object.values(assets);
     return values.map((el, idx) => {
         return (<PriceItem
@@ -38,6 +39,7 @@ const renderRow = (assets) => {
             change={el.quote.USD.percent_change_24h}
             market={el.quote.USD.market_cap}
             symbol={el.symbol}
+            wallet={walletsSym}
         />)
     })
 }
