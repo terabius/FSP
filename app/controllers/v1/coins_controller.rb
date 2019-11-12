@@ -1,4 +1,4 @@
-class CoinsController < ApplicationController
+class V1::CoinsController < ApplicationController
   def index
   end
 
