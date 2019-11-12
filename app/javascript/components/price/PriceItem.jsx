@@ -10,8 +10,10 @@ export default function PriceItem(props) {
                 <div>{props.change}</div>
                 <div>{props.market}</div>
                 <div>{props.trade}</div>
-                <div>{props.follow}</div> 
+                <div><button onClick={handleFollow}>follow</button></div> 
             </div>
         </>
     )
 }
+
+

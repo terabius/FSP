@@ -6,7 +6,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    idle: () => null
+    idle: () => 1
 });
 
 
