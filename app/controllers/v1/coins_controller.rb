@@ -17,9 +17,11 @@ class V1::CoinsController < ApplicationController
   end
 
   def destroy
-    coin_to_kill = current_user.watchlist.coins.find(:id)
-    if coin_to_kill.destroy
-      render json:{status:200}
+
+    @coin_to_kill = current_user.watchlist.coins.find(params[:id])
+    name = @coin_to_kill.name
+    if @coin_to_kill.destroy
+      render json: name
     else
       render json:{status:-1}
     end

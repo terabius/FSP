@@ -4,7 +4,7 @@ import {add, remove} from '../../actions/wallets_actions'
 
 const mapStateToProps = (state) => ({
     assets: state.entities.assets,
-    walletsSym: Object.keys(state.entities.wallets)
+    wallets: state.entities.wallets
 });
 
 const mapDispatchToProps = (dispatch) => ({

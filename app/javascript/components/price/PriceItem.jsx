@@ -9,13 +9,19 @@ export default class PriceItem extends Component {
     }
 
     handleFollow(event){
+
         console.log(this.props.symbol);
         console.log(event.target);
         
-        event.target.style.color='yellow';
-
-        store.dispatch(add(this.props.symbol))
-        .then(res => console.log(res)); 
+        if(Object.keys(this.props.wallets).includes(this.props.symbol)){
+            console.log(this.props.wallets[this.props.symbol].id);
+            store.dispatch(remove(this.props.wallets[this.props.symbol].id));
+            event.target.style.color = 'black';
+        }
+        else{
+            event.target.style.color='yellow';
+            store.dispatch(add(this.props.symbol));
+        }
     }
 
     star = () =>{
@@ -25,8 +31,8 @@ export default class PriceItem extends Component {
         const style = {
             color: 'black',
         }
-
-        if (this.props.wallet.includes(this.props.symbol)){
+        
+        if (Object.keys(this.props.wallets).includes(this.props.symbol)){
             return followed;
         }else{
             return style;

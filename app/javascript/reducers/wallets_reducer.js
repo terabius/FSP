@@ -11,8 +11,9 @@ const walletsReducer = (oldState = {}, action) => {
         case ADD_COIN:
             return Object.assign({}, oldState, action.coin);
         case REMOVE_COIN:
-            return Object.assign({}, oldState, { 
-                wallets : [...state.wallets.filter(coin => coin.name !== action.coinId)]
+            console.log(action.coinId); /////////////////////////////////////////////////////////////NEED TO FIND A WAY TO DELETE
+            return Object.assign({}, oldState, {
+                wallets : [...state.wallets.filter(coin => coin.id !== action.coinId)]
             });
         // case LOGOUT_CURRENT_USER:
         //     return Object.assign({},oldState, {wallets:null} )
