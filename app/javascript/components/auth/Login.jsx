@@ -14,7 +14,6 @@ export default class Login extends Component {
     }
 
     handleSubmit(event) {
-        console.log('submitted');
         event.preventDefault();
         const user = this.state;
         store.dispatch(login(user))

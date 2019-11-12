@@ -12,8 +12,8 @@ const usersReducer = (oldState ={}, action) => {
         case RECEIVE_CURRENT_USER:
             return Object.assign({},oldState,{[action.payload.users.id]:action.payload.users});
 
-        case LOGOUT_CURRENT_USER:
-            return _nullUser;
+        // case LOGOUT_CURRENT_USER:
+        //     return _nullUser;
         default:
             return oldState;
     }

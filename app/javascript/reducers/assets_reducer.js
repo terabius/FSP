@@ -7,9 +7,9 @@ const assetsReducer = (oldState = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
-            return Object.assign({}, oldState, { assets: action.payload.assets });
-        case LOGOUT_CURRENT_USER:
-            return Object.assign({},oldState, {user:null} )
+            return Object.assign({}, oldState, action.payload.assets );
+        // case LOGOUT_CURRENT_USER:
+        //     return Object.assign({},oldState, {assets:null} )
         default:
             return oldState;
     }

@@ -9,6 +9,7 @@ import Login from './auth/Login'
 import Registration from './auth/Registration'
 import DashboardContainer from "./dashboard/DashboardContainer"
 import PriceContainer from "./price/PriceContainer"
+import Account from './Account'
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <AuthRoute path='/signin' component={Login} />
         <ProtectedRoute path='/dashboard' component={DashboardContainer} />
         <ProtectedRoute path='/price' component={PriceContainer} /> 
+        <ProtectedRoute path='/account' component={Account} />
         <AuthRoute exact path='/' component={Home} />
       </Switch>
     </React.Fragment>          

@@ -5,7 +5,7 @@ export default function PriceItem(props) {
         <>
             <div className="price-item">
                 <div>{props.number}</div>
-                <div>{props.name}</div>
+                <div className='crypto-name'>{props.name}</div>
                 <div>{props.price}</div>
                 <div>{props.change}</div>
                 <div>{props.market}</div>
