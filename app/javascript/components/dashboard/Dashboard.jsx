@@ -2,11 +2,11 @@ import React from 'react'
 import Card from './Card'
 import {Link} from 'react-router-dom'
 
-const Dashboard = ({wallets,logout}) => {
+const Dashboard = ({wallets}) => {
 
     return (
         <React.Fragment>
-            
+           { console.log(wallets)}
             <div className="dash-container">
                 <div className="dash-title">Following</div>
                 <div className="dash-kid">
