@@ -9,4 +9,6 @@ class Assets
         )
         JSON.parse(response)
     end
+
 end
+

@@ -1,11 +1,11 @@
 json.set! :users do
-    json.extract! @user, :id, :last_name, :email
+    json.( @user, :id, :last_name, :email)
 end
 
 json.set! :wallets do
     Watchlist.find_by(user_id: @user.id).coins.each do |coin|
         json.set! coin.name do
-            json.extract! coin, :id, :name
+            json.( coin, :id, :name)
         end
     end    
 end
