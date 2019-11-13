@@ -10,14 +10,14 @@ json.set! :wallets do
     end    
 end
 
-fetch_assets = Assets.new
-response = fetch_assets.getAssets
+# fetch_assets = Assets.new
+# response = fetch_assets.getAssets
 
 # result = { }
 # response['data'].each do |crypto|
 #     result[crypto['symbol']] = crypto
 # end
-
-# json.set! :assets do 
-#     json.merge! result
-# end
+res = Assets.new
+json.set! :assets do 
+    json.merge! res.result
+end
