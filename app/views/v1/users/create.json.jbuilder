@@ -10,8 +10,8 @@ json.set! :wallets do
     end    
 end
 
-# fetch_assets = Assets.new
-# response = fetch_assets.getAssets
+fetch_assets = Assets.new
+response = fetch_assets.getAssets
 
 # result = { }
 # response['data'].each do |crypto|
