@@ -10,15 +10,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (window.currentUser) {
   
-    let preloadedState = {};
+    // let preloadedState = {};
     
-    $.ajax({url:'/v1/session/reload'})
-    .then( res => {
-    preloadedState.entities = res;
-    });
-    preloadedState.session = { id: window.currentUser.id };
-    preloadedState.errors = {session:'passed'};
+    // $.ajax({url:'/v1/session/reload'})
+    // .then( res => {
+    // preloadedState.entities = res;
+    // });
+    // preloadedState.session = { id: window.currentUser.id };
+    // preloadedState.errors = {session:'passed'};
 
+    const { currentUser } = window;
+    const { id } = currentUser;
+    const preloadedState = {
+      entities: {
+        users: {
+          [id]: currentUser
+        }
+      },
+      session: { id }
+    };
     store = configureStore(preloadedState);
     delete window.currentUser;
    

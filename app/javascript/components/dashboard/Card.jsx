@@ -4,15 +4,25 @@ export default class Card extends Component {
 
     constructor(props){
         super(props);
+
+        this.drawGraph = this.drawGraph.bind(this);
     }
 
-    drawGraph(){
-        const canvas = document.getElementById('name');
+    drawGraph(name){
+        const canvas = document.getElementById(name);
         console.log(canvas);
         const ctx = canvas.getContext('2d');
-        ctx.fillStyle = 'rgb(200,0,0)';
-        ctx.fillRect(10, 10, 50, 50);
+        
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.lineTo(50, 50);
+        ctx.stroke();
+        ctx.transform(1,0,0,-1,0,0);
  
+    }
+
+    componentDidMount(){
+        this.drawGraph(this.props.name)
     }
 
     render() {
@@ -34,7 +44,7 @@ export default class Card extends Component {
                 </div>            
                 <div className="card-chart">
                     GRAPH
-                    <canvas id='name'>
+                    <canvas id={this.props.name}>
 
                     </canvas>
                     
