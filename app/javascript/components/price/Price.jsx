@@ -45,7 +45,7 @@ const renderRow = (assets, wallets) => {
 }
 
 const handleSearch = (event) => {
-    console.log(event.target.value)
+    // console.log(event.target.value)
     let assets = document.querySelectorAll('.price-item');
     let input = event.target.value.toUpperCase();
     assets.forEach((crypto) => {

@@ -16,20 +16,29 @@ export default class Card extends Component {
         this.drawGraph = this.drawGraph.bind(this);
         
     }
-    
     componentDidMount(){
-
+        
         fetchHistory(this.props.symbol)
-            .then(res => this.drawGraph(this.props.name,
-                res['Data']['Data']));
-                
-    }
-
-    render() {
+        .then(res => this.drawGraph(this.props.name,
+            res['Data']['Data']));
+            
+        }
+        
+        render() {
+        const arr = [BTC,BCH,ETH,XLM,EOS,XRP];
         const divRed = {color:'red'};
         const divGreen = { color:'green' };
         const percentIsPos = (this.props.percentage>0);
-        
+
+        const finder = (arr)=> {
+            for(const i in arr){
+                if(i.indexOf(this.props.symbol)){
+                    console.log(i);
+                    return i;
+                }
+            }
+        }
+
         return (
             <>                
             <div className="card-container"  >
@@ -37,8 +46,9 @@ export default class Card extends Component {
 
                 <div className="card-sub-info">
                    
-                    <div> 
-                        <img src={BTC} alt="btc" width='28px' height='28px'/>
+                    <div>
+                        
+                        <img src={finder(arr)} alt="btc" width='28px' height='28px'/>
                         <span className='card-name'>{this.props.name}</span>
                     </div>
                     <div>{this.props.time}</div>
@@ -118,6 +128,8 @@ export default class Card extends Component {
                     //     'rgba(153, 102, 255, 1)',
                     //     'rgba(255, 159, 64, 1)'
                     // ],
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
                     borderWidth: 1
                 }]
             },
