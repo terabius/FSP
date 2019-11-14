@@ -6,9 +6,6 @@ const Dashboard = ({wallets,assets}) => {
 
     return (
         <React.Fragment>
-           {/* {console.log(wallets['BTC'].name)} */}
-           {/* {console.log(assets)} */}
-           
             <div className="dash-container">
                 <div className="dash-title">Following</div>
                 <div className="dash-kid">
@@ -19,6 +16,7 @@ const Dashboard = ({wallets,assets}) => {
                         price={assets[el].quote.USD.price}
                         percentage={assets[el].quote.USD.percent_change_24h}
                         />
+                       
                         </div>
                     )}
                 </div>
@@ -29,6 +27,3 @@ const Dashboard = ({wallets,assets}) => {
 }
 
 export default Dashboard
-
-
-

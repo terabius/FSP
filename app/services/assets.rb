@@ -22,15 +22,6 @@ class Assets
         )
         JSON.parse(response)
     end
-
-    def self.getHistorical(symbol)
-        link = 'https://raw.githubusercontent.com/bppandre/apitest/master/history.json'
-        historyData = RestClient::Request.execute(
-        method: :get,
-        url: link
-        )
-        JSON.parse(historyData)
-    end
-    
+ 
 end
 
