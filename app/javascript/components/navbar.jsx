@@ -7,7 +7,7 @@ class Navbar extends React.Component {
     render() {
         return (
             <div className="flex-container-navbar">
-                <div className="flex-item-navbar item-left-nav logo"><h1><Link to='/'>GROINBASE</Link></h1></div>
+                <div className="flex-item-navbar item-left-nav logo"><h1>GROINBASE</h1></div>
                 <NavbarModuleContainer />
             </div>
         );
