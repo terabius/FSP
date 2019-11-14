@@ -26,18 +26,11 @@ export default class Card extends Component {
         
         render() {
         const arr = [BTC,BCH,ETH,XLM,EOS,XRP];
+        const arr_double = ['BTC', 'BCH', 'ETH', 'XLM', 'EOS', 'XRP'];
+        const idx = arr_double.indexOf(this.props.symbol); 
         const divRed = {color:'red'};
         const divGreen = { color:'green' };
         const percentIsPos = (this.props.percentage>0);
-
-        const finder = (arr)=> {
-            for(const i in arr){
-                if(i.indexOf(this.props.symbol)){
-                    console.log(i);
-                    return i;
-                }
-            }
-        }
 
         return (
             <>                
@@ -48,7 +41,7 @@ export default class Card extends Component {
                    
                     <div>
                         
-                        <img src={finder(arr)} alt="btc" width='28px' height='28px'/>
+                        <img src={arr[idx]} alt="btc" width='28px' height='28px'/>
                         <span className='card-name'>{this.props.name}</span>
                     </div>
                     <div>{this.props.time}</div>
@@ -128,8 +121,9 @@ export default class Card extends Component {
                     //     'rgba(153, 102, 255, 1)',
                     //     'rgba(255, 159, 64, 1)'
                     // ],
-                    backgroundColor: 'rgb(255, 99, 132)',
-                    borderColor: 'rgb(255, 99, 132)',
+                    // backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: ['rgb(255, 99, 132)', 'rgb(98, 126, 234)',
+                        'rgb(175, 213, 136)', 'rgb(247,147,26)'][Math.floor(Math.random() * 4)],
                     borderWidth: 1
                 }]
             },
