@@ -15,6 +15,7 @@
 
 .dash-kid{
     display: flex;
+    flex-wrap: wrap;
     flex: 1 0 50%;
     border: 1px solid grey;
 }

@@ -6,20 +6,21 @@ const Dashboard = ({wallets,assets}) => {
 
     return (
         <React.Fragment>
-           {console.log(wallets)}
-           {console.log(assets)}
+           {/* {console.log(wallets['BTC'].name)} */}
+           {/* {console.log(assets)} */}
            
             <div className="dash-container">
                 <div className="dash-title">Following</div>
                 <div className="dash-kid">
-                    <div className="crypto-view"><Card /></div>
-                    <div className="crypto-view"><Card /></div>
-                    <div className="crypto-view"><Card /></div>
-                </div>
-                <div className="dash-kid">
-                    <div className="crypto-view"><Card /></div>
-                    <div className="crypto-view"><Card /></div>
-                    <div className="crypto-view"><Card /></div>
+                    { Object.keys(wallets).map((el) =>
+                        <div className="crypto-view" key={el}><Card 
+                        name={el}
+                        time={'24h'}
+                        price={assets[el].quote.USD.price}
+                        percentage={assets[el].quote.USD.percent_change_24h}
+                        />
+                        </div>
+                    )}
                 </div>
                 <Link to='/price' className='className="dash-title"'>Discover more #LINK</Link>
             </div>
