@@ -4,10 +4,12 @@ import ReactDOM from 'react-dom'
 import configureStore from '../store/configureStore'
 import Root from '../components/Root'
 
+
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {
-    const preloadedState = {
+    const preloadedState = 
+    {
       session: { id: window.currentUser.id },
       entities: {
         users: { [window.currentUser.id]: window.currentUser }
