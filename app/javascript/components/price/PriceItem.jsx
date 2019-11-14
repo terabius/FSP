@@ -51,7 +51,7 @@ export default class PriceItem extends Component {
                     <div className='crypto-name'>{this.props.name}</div>
                     <div>${this.props.price.toFixed(2)}</div>
                     <div style={percentIsPos ? divGreen : divRed }>{this.props.change.toPrecision(2)}%</div>
-                    <div>{this.props.market}</div>
+                    <div>{this.props.market.toPrecision(3)}</div>
                     <div><button className='btn btn-flat' disabled>Trade</button></div>
                     <div>
                         <i className="fa fa-3x fa-star" aria-hidden="true" style={this.star()} onClick={this.handleFollow}></i>

@@ -14,7 +14,6 @@ import AccountContainer from "./AccountContainer"
 export default function App() {
   return (
     <React.Fragment>
-
       <Navbar />
       <Switch>
         <AuthRoute path='/signup' component={Registration} />

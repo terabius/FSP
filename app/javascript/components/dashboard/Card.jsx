@@ -1,29 +1,100 @@
 import React, { Component } from 'react'
 import {fetchHistory} from '../../util/wallets_v1_util'
 
+import BTC from '../../../assets/images/logo/BTC.png'
+import BCH from '../../../assets/images/logo/BCH.png'
+import ETH from '../../../assets/images/logo/ETH.png'
+import XLM from '../../../assets/images/logo/XLM.png'
+import EOS from '../../../assets/images/logo/EOS.png'
+import XRP from '../../../assets/images/logo/XRP.png'
+
+
 export default class Card extends Component {
 
     constructor(props){
         super(props);
-
         this.drawGraph = this.drawGraph.bind(this);
         
     }
     
-    
-    drawGraph(name, history){
-        const ctx = document.getElementById(name).getContext('2d');
+    componentDidMount(){
+
+        fetchHistory(this.props.symbol)
+            .then(res => this.drawGraph(this.props.name,
+                res['Data']['Data']));
+                
+    }
+
+    render() {
+        const divRed = {color:'red'};
+        const divGreen = { color:'green' };
+        const percentIsPos = (this.props.percentage>0);
         
-        const hist = history.map( el =>
+        return (
+            <>                
+            <div className="card-container"  >
+
+
+                <div className="card-sub-info">
+                   
+                    <div> 
+                        <img src={BTC} alt="btc" width='28px' height='28px'/>
+                        <span className='card-name'>{this.props.name}</span>
+                    </div>
+                    <div>{this.props.time}</div>
+                </div>
+
+
+                <div className='card-sub-info'>
+                    <div className='card-price'>${this.props.price.toFixed(2)}</div>
+                    <div style={percentIsPos ? divGreen : divRed }>{this.props.percentage.toPrecision(2)}%</div>
+                </div> 
+
+
+
+                <div className="card-chart">
+                    <canvas id={this.props.name} >
+
+                    </canvas>
+                </div>
+            </div>
+            </>
+        )
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    drawGraph(name, history) {
+        const ctx = document.getElementById(name).getContext('2d');
+
+        const hist = history.map(el =>
             el['close']
-            );
+        );
         const norm = Math.max(...hist);
         // console.log(norm);
-        const pts = hist.map(el=>el/norm);
+        const pts = hist.map(el => el / norm);
         // console.log(hist);
         const xlabel = pts.map(el => '');
         // console.log(xlabel);
-        
+
         const myChart = new Chart(ctx, {
             type: 'line',
             data: {
@@ -78,41 +149,6 @@ export default class Card extends Component {
         });
 
     }
-
-    componentDidMount(){
-
-        fetchHistory(this.props.name)
-            .then(res => this.drawGraph(this.props.name,
-                res['Data']['Data']));
-                
-    }
-
-    render() {
-        const divRed = {color:'red'};
-        const divGreen = { color:'green' };
-        const percentIsPos = (this.props.percentage>0);
-        
-        return (
-            <>                
-            <div className="card-container"  >
-                <div className="card-sub-info">
-                    <div>{this.props.name}</div>
-                    <div>{this.props.time}</div>
-            
-                </div>
-                <div className='card-sub-info'>
-                    <div>{this.props.price.toFixed(2)}</div>
-                    <div style={percentIsPos ? divGreen : divRed }>{this.props.percentage.toPrecision(2)}%</div>
-                </div>            
-                <div className="card-chart">
-                    <canvas id={this.props.name}>
-
-                    </canvas>
-                </div>
-            </div>
-            </>
-            )
-        }
-    }
+}
     
     

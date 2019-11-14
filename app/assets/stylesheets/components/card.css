@@ -11,9 +11,19 @@
 .card-sub-info{
     display: flex;
     justify-content: space-between;
-    flex:0 0 10%;    
+    flex:0 0 10%; 
+    padding: 15px;   
 }
 
 .card-chart{
     flex:0 0 80%;
+}
+
+.card-price{
+    font-size: 28px;
+    font-weight: bolder;
+}
+.card-name{
+    font-weight: bold;
+    font-size: 18px;
 }

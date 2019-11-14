@@ -11,7 +11,8 @@ const Dashboard = ({wallets,assets}) => {
                 <div className="dash-kid">
                     { Object.keys(wallets).map((el) =>
                         <div className="crypto-view" key={el}><Card 
-                        name={el}
+                        symbol={el}
+                        name={assets[el].name}
                         time={'24h'}
                         price={assets[el].quote.USD.price}
                         percentage={assets[el].quote.USD.percent_change_24h}

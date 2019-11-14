@@ -9,6 +9,7 @@
 .dash-title{
     flex: 0 0 10%;
     margin:0px 0px 0px 0px;
+    padding: 12px;
     font-size:30px;
     border: 1px solid grey;
 }

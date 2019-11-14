@@ -46,6 +46,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.createElement('div');
   root.setAttribute("id", "root");
 
+  // const broot = document.createElement('div');
+  // broot.setAttribute("id", "broot");
+  // document.body.appendChild(broot); 
+  // const node = document.getElementById('broot');
+
   ReactDOM.render(
     <Root store={store}/>,
     document.body.appendChild(root),
