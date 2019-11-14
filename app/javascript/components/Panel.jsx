@@ -15,10 +15,10 @@ export default function Panel() {
                 <div className='panel-item'>Trade</div>
             </div>
             
-                    {[{ name: 'btc', price: 300, change: 3, chart: 4 },
-                    { name: 'etc', price: 300, change: 3, chart: 4 },
-                    { name: 'eos', price: 300, change: 3, chart: 4 },
-                    { name: 'lxs', price: 300, change: 3, chart: 4 }].map((data,idx)=>
+                    {[{ name: 'Bitcoin', price: 300, change: 3, chart: 4 },
+                    { name: 'Ethereum', price: 300, change: 3, chart: 4 },
+                    { name: 'Bitcoin Cash', price: 300, change: 3, chart: 4 },
+                    { name: 'Litecoim', price: 300, change: 3, chart: 4 }].map((data,idx)=>
 
                     <div className="panel-tableau-kid" key={data.name}>
 
