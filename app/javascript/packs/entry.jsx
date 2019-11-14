@@ -7,16 +7,21 @@ import Root from '../components/Root'
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
+
   if (window.currentUser) {
-    const preloadedState = 
-    {
-      session: { id: window.currentUser.id },
-      entities: {
-        users: { [window.currentUser.id]: window.currentUser }
-      }
-    };
+  
+    let preloadedState = {};
+    
+    $.ajax({url:'/v1/session/reload'})
+    .then( res => {
+    preloadedState.entities = res;
+    });
+    preloadedState.session = { id: window.currentUser.id };
+    preloadedState.errors = {session:'passed'};
+
     store = configureStore(preloadedState);
     delete window.currentUser;
+   
   } else {
     store = configureStore();
   }

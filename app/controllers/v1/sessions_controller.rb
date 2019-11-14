@@ -28,4 +28,8 @@ class V1::SessionsController < ApplicationController
     end
   end
 
+  def reload
+    render :reload
+  end
+
 end
