@@ -7,31 +7,35 @@ import Root from '../components/Root'
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
+  // let fassets;
+
+  // $.ajax({ url: 'https://raw.githubusercontent.com/bppandre/apitest/master/crypto.json', dataType:'json'})
+  //   .then(res => res.data.forEach(el => 
+  //     Object.assign({}, fassets, el.symbol)));
+      
 
   if (window.currentUser) {
   
-    // let preloadedState = {};
-    
-    // $.ajax({url:'/v1/session/reload'})
-    // .then( res => {
-    // preloadedState.entities = res;
-    // });
-    // preloadedState.session = { id: window.currentUser.id };
-    // preloadedState.errors = {session:'passed'};
-
+    const { wallet } = window;
+    const wallets = {};
+    wallet.forEach(element => {
+      wallets[element.name] = element;
+    });
     const { currentUser } = window;
     const { id } = currentUser;
     const preloadedState = {
       entities: {
+        wallets: wallets,
         users: {
           [id]: currentUser
         }
       },
       session: { id }
     };
+
     store = configureStore(preloadedState);
     delete window.currentUser;
-   
+    delete window.wallet;
   } else {
     store = configureStore();
   }
