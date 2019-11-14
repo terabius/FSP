@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
 
   if (window.currentUser) {
-  
+
     const { wallet } = window;
     const wallets = {};
     wallet.forEach(element => {
@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const { id } = currentUser;
     const preloadedState = {
       entities: {
+        assets: JSON.parse(sessionStorage.getItem('assets')),
         wallets: wallets,
         users: {
           [id]: currentUser

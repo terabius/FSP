@@ -24,7 +24,10 @@ const receiveErrors = errors => ({
 export const signup = user => dispatch => (
     SessionAPIUtil.signup(user)
     .then(
-        payload => (dispatch(receiveCurrentUser(payload))),
+        payload => {
+            sessionStorage.setItem('assets', JSON.stringify(payload.assets));
+            (dispatch(receiveCurrentUser(payload)));
+        },
         err => (dispatch(receiveErrors(err.responseJSON)))
     )
 );
@@ -32,7 +35,11 @@ export const signup = user => dispatch => (
 export const login = user => dispatch => (
     SessionAPIUtil.login(user)
     .then(
-        payload => (dispatch(receiveCurrentUser(payload))),
+        payload => {
+            
+            sessionStorage.setItem('assets',JSON.stringify(payload.assets));
+            (dispatch(receiveCurrentUser(payload)));
+        },
         err => (dispatch(receiveErrors(err.responseJSON)))
     )
 );
