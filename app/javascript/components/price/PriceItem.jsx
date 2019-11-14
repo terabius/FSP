@@ -40,13 +40,17 @@ export default class PriceItem extends Component {
     }
 
     render() {
+        const divRed = { color: 'red' };
+        const divGreen = { color: 'green' };
+        const percentIsPos = (this.props.change > 0);
+
         return (
             <>  
                 <div className="price-item">
                     <div>{this.props.number}</div>
                     <div className='crypto-name'>{this.props.name}</div>
-                    <div>{this.props.price}</div>
-                    <div>{this.props.change}</div>
+                    <div>{this.props.price.toFixed(2)}</div>
+                    <div style={percentIsPos ? divGreen : divRed }>{this.props.change.toPrecision(2)}%</div>
                     <div>{this.props.market}</div>
                     <div><button className='btn btn-flat' disabled>Trade</button></div>
                     <div>
