@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {login} from '../../actions/session_actions'
+import {loggedInUi} from '../../util/ui_util'
 
 export default class Login extends Component {
     constructor(props) {
@@ -18,6 +19,7 @@ export default class Login extends Component {
         const user = this.state;
         store.dispatch(login(user))
         .then(()=> {
+        loggedInUi();
         this.props.history.push('/dashboard');
         
         });

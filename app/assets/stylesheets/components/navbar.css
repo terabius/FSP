@@ -6,9 +6,15 @@
     min-height: 8vh;
     
 }
-
-.logo{
+.white{
     color:white;
+}
+
+.black{
+    color:black;
+}
+.logo{
+    
     font-weight: bolder;
     font-size:25px;
     font-family: 'ZCOOL KuaiLe', cursive;
@@ -48,7 +54,7 @@ justify-content: flex-start;
     font-size:20px;
     margin-right: 10px;
     font-weight: 200;
-    color:white;
+    
     text-decoration: none;
 }
 .anchor:hover{

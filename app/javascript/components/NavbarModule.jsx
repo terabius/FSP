@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import { loggedOutUi } from '../util/ui_util';
 
 
 export default function NavbarModule({currentUserId, logout}) {
@@ -7,14 +8,14 @@ export default function NavbarModule({currentUserId, logout}) {
     const loggedOut = () => (
         <>
         <div className="flex-item-navbar item-center-nav">
-            <a className="anchor mid">Price</a>
-            <a className="anchor mid">Product</a>
-            <a className="anchor mid">Company</a>
+            <a className="anchor mid white">Price</a>
+            <a className="anchor mid white">Product</a>
+            <a className="anchor mid white">Company</a>
         </div>
         <div className="flex-item-navbar item-right-nav">
             <div>
 
-                <Link className="anchor" to='/signin'>Sign in</Link>
+                <Link className="anchor white" to='/signin'>Sign in</Link>
                 <Link className="btn btn-flat" to='/signup'>Sign up</Link>
 
             </div>
@@ -24,16 +25,17 @@ export default function NavbarModule({currentUserId, logout}) {
         );
        
         const handleLogout = () => {
-            logout()            
+            loggedOutUi();
+            logout();           
         }
 
 
         const loggedIn = () => (
             <>
                 <div className="flex-item-navbar item-center-nav">
-                    <Link className="anchor mid" to='/dashboard'>Home</Link>
-                    <Link className="anchor mid" to='/price'>Price</Link>
-                    <Link className="anchor mid" to='/account'>Account</Link>
+                    <Link className="anchor mid white" to='/dashboard'>Home</Link>
+                    <Link className="anchor mid white" to='/price'>Price</Link>
+                    <Link className="anchor mid white" to='/account'>Account</Link>
                 </div>
                 <div className="flex-item-navbar item-right-nav">
                     <div>
