@@ -6,6 +6,7 @@ export const addCoin = (symbol) => (
         // success: success,
         // dataType: json
     })
+    // .then(r=>console.log(r))
 );
 
 export const removeCoin = (id) => (

@@ -15,13 +15,13 @@ const walletsReducer = (oldState = {}, action) => {
             
         case ADD_COIN:
             return Object.assign({}, oldState, action.coin);
+            
         case REMOVE_COIN:
-            // console.log(action.coinSym); /////////////////////////////////////////////////////////////NEED TO FIND A WAY TO DELETE
-            // console.log(oldState);
+           
             const newState = Object.assign({}, 
                 Object.filter( oldState, coin => coin.name !== action.coinSym)
                 );
-            // console.log(newState);
+    
             return newState
 
         // case LOGOUT_CURRENT_USER:

@@ -4,9 +4,9 @@ export default function Account(props) {
     return (
         <div>
             Account:
-            {console.log(props.wallets)}
+            {/* {console.log(props.wallets)} */}
             {Object.keys(props.wallets).map(el =>(
-                (<div> {el} </div>)
+                (<div key={el}> {el} </div>)
             )
             )}
             {/* {props.wallets.forEach(el=>console.log(el))} */}

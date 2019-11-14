@@ -21,8 +21,6 @@ class V1::CoinsController < ApplicationController
     @coin_to_kill = current_user.watchlist.coins.find(params[:id])
     name = @coin_to_kill.name
     if @coin_to_kill.destroy
-      p '#######################################################'
-      p name
       render json: name.to_json
 
     else
