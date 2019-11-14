@@ -18,8 +18,8 @@ export const removeCoin = (id) => (
 
 export const fetchHistory = (sym) => (
     $.ajax({
-        url: 'https://raw.githubusercontent.com/bppandre/apitest/master/history.json',
+        url: `https://raw.githubusercontent.com/bppandre/apitest/master/${sym}.json`,
         dataType: 'json'
     })
-        // .then(r => window.r=r)
+       
 );

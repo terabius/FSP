@@ -51,6 +51,10 @@ export default class Card extends Component {
                 }]
             },
             options: {
+                legend: {
+                    display: false,
+                },
+                elements: { point: { radius: 0 } },
                 scales:
                 {
 
@@ -77,9 +81,9 @@ export default class Card extends Component {
 
     componentDidMount(){
 
-        fetchHistory('BTC')
-            .then(r => this.drawGraph(this.props.name,
-                r['Data']['Data']));
+        fetchHistory(this.props.name)
+            .then(res => this.drawGraph(this.props.name,
+                res['Data']['Data']));
                 
     }
 
