@@ -17,7 +17,10 @@ export default class Login extends Component {
         event.preventDefault();
         const user = this.state;
         store.dispatch(login(user))
-        .then(()=> this.props.history.push('/dashboard'));
+        .then(()=> {
+        this.props.history.push('/dashboard');
+        
+        });
     }
     
     handleChange(event) {
