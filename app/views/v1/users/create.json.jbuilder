@@ -2958,7 +2958,7 @@ res =  {
         }
     ]
 }
-
+result  ={}
 res['data'].each do |crypto|
             result[crypto['symbol']] = crypto
 end
