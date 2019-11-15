@@ -2959,7 +2959,10 @@ res =  {
     ]
 }
 
-json.set! :assets do 
-    json.merge! res.result
+res['data'].each do |crypto|
+            result[crypto['symbol']] = crypto
 end
 
+json.set! :assets do 
+    json.merge! result
+end
