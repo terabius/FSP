@@ -33,9 +33,9 @@ export default function NavbarModule({currentUserId, logout}) {
         const loggedIn = () => (
             <>
                 <div className="flex-item-navbar item-center-nav">
-                    <Link className="anchor mid white" to='/dashboard'>Home</Link>
-                    <Link className="anchor mid white" to='/price'>Price</Link>
-                    <Link className="anchor mid white" to='/account'>Account</Link>
+                    <Link className="anchor mid" to='/dashboard'>Home</Link>
+                    <Link className="anchor mid" to='/price'>Price</Link>
+                    <Link className="anchor mid" to='/account'>Account</Link>
                 </div>
                 <div className="flex-item-navbar item-right-nav">
                     <div>

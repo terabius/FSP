@@ -38,21 +38,21 @@ document.addEventListener('DOMContentLoaded', () => {
     delete window.currentUser;
     delete window.wallet;
   } else {
+    document.body.classList.add('blue');
+    const ele = document.querySelectorAll('.logo');
+    
+    Array.prototype.map.call(ele, (el) => {
+      el.classList.add('white');
+    });
     store = configureStore();
   }
   
   window.store = store;
   //creating my root div with id root 
-  const root = document.createElement('div');
-  root.setAttribute("id", "root");
-
-  // const broot = document.createElement('div');
-  // broot.setAttribute("id", "broot");
-  // document.body.appendChild(broot); 
-  // const node = document.getElementById('broot');
+  const root = document.getElementById('root');
 
   ReactDOM.render(
     <Root store={store}/>,
-    document.body.appendChild(root),
+    root
   )
 })
