@@ -8,11 +8,10 @@ export default class PanelItem extends Component {
     render() {
         return (
             <>
-                <div>{this.props.num}</div>
-                <div>{this.props.name}</div>
-                <div>{this.props.price}</div>
-                <div>{this.props.change}</div>
-                <div>{this.props.chart}</div>
+                <div>{this.props.num} <span className="panel-name"> {this.props.name}</span></div>
+                <div className='panel-price'>{this.props.price}</div>
+                <div className='panel-change'>{this.props.change}</div>
+                <div className='panel-chart'>{this.props.chart}</div>
                 <div className='btn btn-flat'>Trade</div>
             </>
         )

@@ -17,8 +17,8 @@ export default class Card extends Component {
         
     }
     componentDidMount(){
-        
-        fetchHistory(this.props.symbol)
+        const sym = ['BTC', 'BCH', 'ETH', 'XLM', 'EOS', 'XRP'].indexOf(this.props.symbol)!== -1 ? this.props.symbol : 'BTC'  
+        fetchHistory(sym)
         .then(res => this.drawGraph(this.props.name,
             res['Data']['Data']));
             
@@ -27,7 +27,7 @@ export default class Card extends Component {
         render() {
         const arr = [BTC,BCH,ETH,XLM,EOS,XRP];
         const arr_double = ['BTC', 'BCH', 'ETH', 'XLM', 'EOS', 'XRP'];
-        const idx = arr_double.indexOf(this.props.symbol); 
+        const idx = (arr_double.indexOf(this.props.symbol) !== -1) ? arr_double.indexOf(this.props.symbol) : 1; 
         const divRed = {color:'red'};
         const divGreen = { color:'green' };
         const percentIsPos = (this.props.percentage>0);
@@ -66,25 +66,6 @@ export default class Card extends Component {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     drawGraph(name, history) {
         const ctx = document.getElementById(name).getContext('2d');
 
@@ -105,23 +86,6 @@ export default class Card extends Component {
                 datasets: [{
                     label: '',
                     data: pts,
-                    // backgroundColor: [
-                    //     'rgba(255, 99, 132, 0.2)',
-                    //     'rgba(54, 162, 235, 0.2)',
-                    //     'rgba(255, 206, 86, 0.2)',
-                    //     'rgba(75, 192, 192, 0.2)',
-                    //     'rgba(153, 102, 255, 0.2)',
-                    //     'rgba(255, 159, 64, 0.2)'
-                    // ],
-                    // borderColor: [
-                    //     'rgba(255, 99, 132, 1)',
-                    //     'rgba(54, 162, 235, 1)',
-                    //     'rgba(255, 206, 86, 1)',
-                    //     'rgba(75, 192, 192, 1)',
-                    //     'rgba(153, 102, 255, 1)',
-                    //     'rgba(255, 159, 64, 1)'
-                    // ],
-                    // backgroundColor: 'rgb(255, 99, 132)',
                     borderColor: ['rgb(255, 99, 132)', 'rgb(98, 126, 234)',
                         'rgb(175, 213, 136)', 'rgb(247,147,26)'][Math.floor(Math.random() * 4)],
                     borderWidth: 1
@@ -157,4 +121,4 @@ export default class Card extends Component {
     }
 }
     
-    
+ 

@@ -5,9 +5,13 @@ import NavbarModuleContainer from './NavbarModuleContainer';
 class Navbar extends React.Component {
 
     render() {
+        const style = {
+            color:'black'
+        };
         return (
             <div className="flex-container-navbar">
-                <div className="flex-item-navbar item-left-nav logo white"><h1>GROINBASE</h1></div>
+                <div className="flex-item-navbar item-left-nav logo white">
+                    <h1 style={store.getState().session.id ? style : null}>GROINBASE</h1></div>
                 <NavbarModuleContainer />
             </div>
         );

@@ -7,8 +7,7 @@ export default function Panel() {
         
         <div className="panel-tableau">
             <div className="panel-tableau-kid">
-                <div className='panel-item'>#</div>
-                <div className='panel-item'>Name</div>
+                    <div className='panel-item'># <span className='panel-name'>Name</span></div>
                 <div className='panel-item'>Price</div>
                 <div className='panel-item'>Change</div>
                 <div className='panel-item'>Chart</div>
@@ -17,8 +16,8 @@ export default function Panel() {
             
                     {[{ name: 'Bitcoin', price: 300, change: 3, chart: 4 },
                     { name: 'Ethereum', price: 300, change: 3, chart: 4 },
-                    { name: 'Bitcoin Cash', price: 300, change: 3, chart: 4 },
-                    { name: 'Litecoim', price: 300, change: 3, chart: 4 }].map((data,idx)=>
+                    { name: 'coucou Mams', price: 300, change: 3, chart: 4 },
+                    { name: 'jtaime bizke', price: 😄, change: ❤️, chart: 4 }].map((data,idx)=>
 
                     <div className="panel-tableau-kid" key={data.name}>
 
