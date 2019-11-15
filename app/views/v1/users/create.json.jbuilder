@@ -11,17 +11,8 @@ json.set! :wallets do
 end
 
 # res = Assets.new
-
-res =  {
-    "status": {
-        "timestamp": "2019-11-11T16:35:38.781Z",
-        "error_code": 0,
-        "error_message": null,
-        "elapsed": 23,
-        "credit_count": 1,
-        "notice": null
-    },
-    "data": [
+null = 'null'
+res = [
         {
             "id": 1,
             "name": "Bitcoin",
@@ -2957,10 +2948,10 @@ res =  {
             }
         }
     ]
-}
-result  ={}
-res['data'].each do |crypto|
-            result[crypto['symbol']] = crypto
+
+result  = {}
+res.each do |crypto|
+            result[crypto[:symbol]] = crypto
 end
 
 json.set! :assets do 
