@@ -4,6 +4,19 @@ import { loggedOutUi } from '../util/ui_util';
 
 
 export default function NavbarModule({currentUserId, logout}) {
+    const handleDemo = () => {
+        const logBtn = document.getElementById('sign');
+        logBtn.click();
+        setTimeout(()=>{
+
+        const emailField = document.getElementById('email').value='demo@demo.demo';
+        const password = document.getElementById('password').value='password';
+        const sub = document.getElementById('sub');
+        sub.click();
+        }
+        , 2000);
+        
+    }
 
     const loggedOut = () => (
         <>
@@ -15,8 +28,9 @@ export default function NavbarModule({currentUserId, logout}) {
         <div className="flex-item-navbar item-right-nav">
             <div>
 
-                <Link className="anchor white" to='/signin'>Sign in</Link>
+                <Link className="anchor white" to='/signin' id='sign'>Sign in</Link>
                 <Link className="btn btn-flat" to='/signup'>Sign up</Link>
+                <button className='btn btn-flat' onClick={handleDemo}>Demo</button>
 
             </div>
         </div>

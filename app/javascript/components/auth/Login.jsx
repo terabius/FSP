@@ -43,18 +43,20 @@ export default class Login extends Component {
             <div className='forms login'>
 
             <input type="email"
+            id='email'
             className='flex-item-login'
             name="email"
             placeholder="email"
             defaultValue={this.state.email} onChange={this.handleChange} required />
             
             <input type="password"
+            id='password'
             className='flex-item-login'
             name="password"
             placeholder="password"
             defaultValue={this.state.passowrd} onChange={this.handleChange} required />
            
-            <button type='submit' className='btn btn-flat'>
+            <button type='submit' id='sub' className='btn btn-flat'>
                 Login
             </button>
 
