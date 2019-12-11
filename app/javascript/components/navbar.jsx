@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from "react-router-dom"
 import NavbarModuleContainer from './NavbarModuleContainer';
 
 class Navbar extends React.Component {
@@ -11,7 +10,8 @@ class Navbar extends React.Component {
         return (
             <div className="flex-container-navbar">
                 <div className="flex-item-navbar item-left-nav logo white">
-                    <h1 style={store.getState().session.id ? style : null}>GROINBASE</h1></div>
+                    <h1 style={store.getState().session.id ? style : null}>KROINBASE</h1>
+                </div>
                 <NavbarModuleContainer />
             </div>
         );
