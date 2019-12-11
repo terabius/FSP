@@ -1,13 +1,13 @@
-.panel-tableau{
+.container-tableau{
     margin-top: 50px;
     display: flex;
     flex-direction: column;
-    border: solid 2px lightslategray;
-    border-radius: 4px;
     background-color: white;
+    border-radius: 4px;                        /* Small radius */
+    box-shadow: 0 10px 30px rgba(0,0,0,.1); 
 }
 
-.panel-tableau-kid {
+.row-tableau {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
