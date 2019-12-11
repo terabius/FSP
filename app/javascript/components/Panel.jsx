@@ -13,6 +13,7 @@ export default function Panel() {
                 <div className='panel-change'>Change</div>
                 <div className='panel-chart'>Chart</div>
                 <div className='panel-action'>Trade</div>
+                <div className="panel-dummy"></div>
             </div>
             
             {
@@ -24,7 +25,7 @@ export default function Panel() {
                 <div className="row-tableau" key={data.name}>
 
                     <PanelItem name={data.name} 
-                    num={idx}
+                    num={(idx+1)}
                     price={data.price} 
                     change={data.change} 
                     chart={data.chart}

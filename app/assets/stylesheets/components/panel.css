@@ -33,5 +33,8 @@
     min-width:10%;
 }
 .panel-action{
-    min-width:20%;
+    min-width:10%;
+}
+.panel-dummy{
+    min-width: 10%;
 }
