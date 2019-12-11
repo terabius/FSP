@@ -7,7 +7,12 @@
     box-shadow: 0 10px 30px rgba(0,0,0,.1); 
 }
 
+.header-tableau{
+    color:grey;
+}
+
 .row-tableau {
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -15,6 +20,18 @@
     border: solid 1px lightgrey;
 }
 
-.panel-item{
-    color:grey;
+.panel-name{
+    min-width:40%;
+}
+.panel-price{
+    min-width:10%;
+}
+.panel-change{
+    min-width:10%;
+}
+.panel-chart{
+    min-width:10%;
+}
+.panel-action{
+    min-width:20%;
 }

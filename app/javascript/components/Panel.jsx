@@ -6,19 +6,20 @@ export default function Panel() {
         <>
         
         <div className="container-tableau">
-            <div className="row-tableau">
-                <div className='panel-item'># </div>
+            <div className="row-tableau header-tableau">
+                <div># </div>
                 <div className='panel-name'>Name</div>
-                <div className='panel-item'>Price</div>
-                <div className='panel-item'>Change</div>
-                <div className='panel-item'>Chart</div>
-                <div className='panel-item'>Trade</div>
+                <div className='panel-price'>Price</div>
+                <div className='panel-change'>Change</div>
+                <div className='panel-chart'>Chart</div>
+                <div className='panel-action'>Trade</div>
             </div>
             
-            {[{ name: 'Bitcoin', price: 300, change: 2, chart: 4 },
-            { name: 'Ethereum', price: 300, change: 3, chart: 4 },
-            { name: 'Bitcoin Cash', price: 300, change: 3, chart: 4 },
-            { name: 'Litecoin', price: 300, change: 3, chart: 4 }].map((data,idx)=>
+            {
+             [{ name: 'Bitcoin', price: 300, change: 2, chart: 4 },
+             { name: 'Ethereum', price: 300, change: 3, chart: 4 },
+             { name: 'Bitcoin Cash', price: 300, change: 3, chart: 4 },
+             { name: 'Litecoin', price: 300, change: 3, chart: 4 }].map((data,idx)=>
 
                 <div className="row-tableau" key={data.name}>
 
