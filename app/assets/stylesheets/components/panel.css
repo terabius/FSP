@@ -3,12 +3,14 @@
     display: flex;
     flex-direction: column;
     background-color: white;
-    border-radius: 4px;                        /* Small radius */
+    border-radius: 6px;                        /* Small radius */
     box-shadow: 0 10px 30px rgba(0,0,0,.1); 
 }
 
 .header-tableau{
     color:grey;
+    font-weight: lighter;
+
 }
 
 .row-tableau {
@@ -18,9 +20,11 @@
     justify-content: space-between;
     padding: 20px;
     border: solid 1px lightgrey;
+    
 }
 
 .panel-name{
+    
     min-width:40%;
 }
 .panel-price{
@@ -33,7 +37,7 @@
     min-width:10%;
 }
 .panel-action{
-    min-width:10%;
+    width:10%;
 }
 .panel-dummy{
     min-width: 10%;
