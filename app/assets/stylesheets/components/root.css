@@ -5,8 +5,9 @@
     width:80%;
 }
 
+/* right blue : rgb(22, 82, 240) */
 .blue{
-    background-color: rgb(22, 82, 240);  
+    background-image: linear-gradient(blue,white, white);
 }
 body{
     font-family: 'Josefin Sans', sans-serif;
