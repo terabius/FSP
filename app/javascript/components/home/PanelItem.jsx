@@ -13,7 +13,7 @@ export default class PanelItem extends Component {
                 <div className='panel-price'>${this.props.price}</div>
                 <div className='panel-change'>{this.props.change}%</div>
                 <div className='panel-chart'>{this.props.chart}</div>
-                <div className="panel-action"><div className="btn btn-green">buy</div></div>
+                <div className="panel-action"><div className="btn btn-flat green">buy</div></div>
             </>
         )
     }

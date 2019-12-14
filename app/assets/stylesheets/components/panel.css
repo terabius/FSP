@@ -4,7 +4,7 @@
     flex-direction: column;
     background-color: white;
     border-radius: 6px;                        /* Small radius */
-    box-shadow: 0 10px 30px rgba(0,0,0,.1); 
+    /*box-shadow: 0 10px 30px rgba(0,0,0,.1); */
 }
 
 .header-tableau{
@@ -17,12 +17,15 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 20px;
-    border: solid 1px lightgrey;
-    
+    border-style: solid;
+    border-color:lightgrey;
+    border-width: 0 0 1px 0;
+    border-radius: 6px;
 }
 
 
 .panel-ord{
+    color:grey;
     padding-left: 10px;
     min-width:calc((100%/14) - 10px);
 }
@@ -48,5 +51,11 @@
 
 .panel-action{
     min-width:calc((100%/14)*2);
+}
+
+.panel-action>.btn-flat{
+    text-align: center;
+    margin-right:calc(50%);
+    padding:14px 0px;
 }
 
