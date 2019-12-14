@@ -1,0 +1,10 @@
+.footerHome-container{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 60px 0px;
+}
+
+.footerHomer-data{
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,45 @@
+.contentTwo-container{
+    margin:15px 0px;
+    display: flex;
+    flex-wrap:wrap;
+    background-color:white ;
+
+}
+
+.contentTwo-title span{
+    font-size:36px;
+}
+
+.contentTwo-title{
+    min-width: 100%;
+    
+    margin:35px auto;
+}
+.contentTwo-data{
+    display:flex;
+    min-width: 50%;
+    overflow:hidden;
+    flex-direction: column;
+}
+
+.contentTwo-subdata{
+    display: flex;
+    margin:18px;
+}
+
+.fakeimgbis{
+    min-width: 18px;
+    min-height: 18px;
+    margin:10px;
+    background-color: rgb(18, 175, 92);
+}
+
+.contentTwo-img{
+
+}
+
+.fakeimg{
+    min-width: 100px;
+    min-height: 100px;
+    background-color: brown;
+}

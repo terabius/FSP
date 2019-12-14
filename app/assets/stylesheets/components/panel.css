@@ -1,5 +1,5 @@
 .container-tableau{
-    margin-top: 50px;
+    margin: 50px 0px;
     display: flex;
     flex-direction: column;
     background-color: white;

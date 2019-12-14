@@ -1,0 +1,15 @@
+
+.contentFour-container{
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    min-height: 280px;
+    margin:15px 0px;
+    align-items: center;
+    border:1px dotted white;
+    
+}
+
+.contentFour-data{
+    font-size: 48px;
+}
