@@ -10,11 +10,9 @@
 .header-tableau{
     color:grey;
     font-weight: lighter;
-
 }
 
 .row-tableau {
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -23,22 +21,32 @@
     
 }
 
+
+.panel-ord{
+    padding-left: 10px;
+    min-width:calc((100%/14) - 10px);
+}
+
 .panel-name{
-    
-    min-width:40%;
+    min-width:calc((100%/14)*6);
 }
+
 .panel-price{
-    min-width:10%;
+    min-width:calc((100%/14));
+    overflow:auto;
 }
+
 .panel-change{
-    min-width:10%;
+    min-width:calc((100%/14)*1);
+    overflow:auto;
 }
+
 .panel-chart{
-    min-width:10%;
+    min-width:calc((100%/14));
+    overflow:auto;
 }
+
 .panel-action{
-    width:10%;
+    min-width:calc((100%/14)*2);
 }
-.panel-dummy{
-    min-width: 10%;
-}
+

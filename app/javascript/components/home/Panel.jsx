@@ -7,13 +7,12 @@ export default function Panel() {
         
         <div className="container-tableau">
             <div className="row-tableau header-tableau">
-                <div># </div>
+                <div className='panel-ord'># </div>
                 <div className='panel-name'>Name</div>
                 <div className='panel-price'>Price</div>
                 <div className='panel-change'>Change</div>
                 <div className='panel-chart'>Chart</div>
                 <div className='panel-action'>Trade</div>
-                <div className="panel-dummy"></div>
             </div>
             
             {

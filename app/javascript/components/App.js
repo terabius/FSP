@@ -1,9 +1,9 @@
 import React from "react"
-import { Switch, Route} from "react-router-dom"
+import {Switch} from "react-router-dom"
 
 import {AuthRoute, ProtectedRoute} from '../util/route_util'
 
-import Home from './Home'
+import Home from './home/Home'
 import Navbar from './navbar'
 import Login from './auth/Login'
 import Registration from './auth/Registration'
