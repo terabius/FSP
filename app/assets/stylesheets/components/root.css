@@ -7,8 +7,13 @@
 
 /* right blue : rgb(22, 82, 240) */
 .blue{
-
-    background-image: linear-gradient(blue,white, white);
+  background-image: url("https://www.flysas.com/us-en/eurobonus/_jcr_content/par-content/styled_container_212/par-styled-container/styled_container_176/par-styled-container/columncontrol/column0/card.img.735.medium.jpeg");
+  background-color: #ffffff;
+  height: 550px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative
     
 }
 
@@ -16,5 +21,4 @@ body{
     font-family: 'Josefin Sans', sans-serif;
     /*font-family: 'Sunshiney', cursive; */
 }
-
 
