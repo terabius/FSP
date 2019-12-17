@@ -1,14 +1,21 @@
 
 .contentFour-container{
-    background-color: blue;
+    background-color: rgb(22, 82, 240);
     display: flex;
     justify-content: space-around;
     min-width: 100%;
-    min-height: 280px;
-    margin:15px 0px;
+    min-height: 220px;
+    margin:65px 0px;
     align-items: center;
 }
 
 .contentFour-data{
-    font-size: 48px;
+    text-align: center;
+    color: white;
+    font-size: 55px;
+}
+
+.contentFour-data span{
+    color:rgb(176, 176, 248);
+    font-size: 18px;
 }
