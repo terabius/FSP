@@ -12,6 +12,7 @@ export default class PanelItem extends Component {
     }
 
 
+   
     
     render() {
         const arr = [BTC,BCH,ETH,XLM];
@@ -32,3 +33,8 @@ export default class PanelItem extends Component {
         )
     }
 }
+
+
+
+
+

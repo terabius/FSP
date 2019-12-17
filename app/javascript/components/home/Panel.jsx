@@ -1,10 +1,14 @@
 import React from 'react'
 import PanelItem from './PanelItem'
+import {
+    LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+} from 'recharts';
 
 export default function Panel() {
+
     return (
         <>
-        
+           
         <div className="container-tableau">
             <div className="row-tableau header-tableau">
                 <div className='panel-ord'># </div>
@@ -38,3 +42,4 @@ export default function Panel() {
         </>
     )
 }
+
