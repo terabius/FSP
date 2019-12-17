@@ -22,10 +22,10 @@ export default function ContentHomeOne() {
                 <div><a href="" className="btn btn-flat">Start earning</a></div>
             </div>
             <div className="contentOne-col">
-                    <div className="contentOne-data"><img src={XTZ} width='28px' height='28px' alt="" />Tezos <span className="grey">XTZ</span> </div>
-                    <div className="contentOne-data"><img src={DAI} width='28px' height='28px' alt="" />Dai <span className="grey">DAI</span>  </div>
-                    <div className="contentOne-data"><img src={EOS} width='28px' height='28px' alt="" />EOS <span className="grey">EOS</span>   </div>
-                    <div className="contentOne-data"><img src={XLM} width='28px' height='28px' alt="" />Stellar Lumens <span className="grey">XLM</span> </div>
+                    <div className="contentOne-data"><img src={XTZ} width='34px' height='34px' alt="" />Tezos <span className="grey">XTZ</span> </div>
+                    <div className="contentOne-data"><img src={DAI} width='34px' height='34px' alt="" />Dai <span className="grey">DAI</span>  </div>
+                    <div className="contentOne-data"><img src={EOS} width='34px' height='34px' alt="" />EOS <span className="grey">EOS</span>   </div>
+                    <div className="contentOne-data"><img src={XLM} width='34px' height='34px' alt="" />Stellar Lumens <span className="grey">XLM</span> </div>
             </div>
           </div>  
         </>

@@ -1,10 +1,10 @@
 .contentOne-container{
     display:flex;
-    /*justify-content: space-between;*/
     margin:50px 0px;
     background-color:white;
 }
 .contentOne-col:first-child{
+    padding-top:20px;
     margin-right: 320px;
 }
 .contentOne-col{
@@ -13,19 +13,31 @@
 }
 .contentOne-col span.grey{
     color:lightgrey;
+    font-size:28px;
 }
+
 .contentOne-col h2{
     font-size:36px;
-    margin:35px 0px;
+    margin:35px 0px 10px 0px;
 }
+
 .contentOne-col p{
     margin:15px 0px;
 }
+.contentOne-col .btn-flat{
+    
+    color: white;
+    padding: 12px 18px;
+    border-radius: 4px;
+    background: rgb(22, 82, 240);
+    transition: background 0.3s ease;
+    text-decoration: none;
 
+}
 
 .contentOne-data{
     margin:20px; 
-    font-size:20px;
+    font-size:28px;
     
 }
 
