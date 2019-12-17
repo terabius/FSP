@@ -7,8 +7,11 @@
 
 /* right blue : rgb(22, 82, 240) */
 .blue{
+
     background-image: linear-gradient(blue,white, white);
+    
 }
+
 body{
     font-family: 'Josefin Sans', sans-serif;
     /*font-family: 'Sunshiney', cursive; */

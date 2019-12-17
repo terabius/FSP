@@ -1,5 +1,9 @@
 import React from 'react'
+
 import XLM from '../../../assets/images/logo/XLM.png'
+import DAI from '../../../assets/images/logo/DAI.png'
+import EOS from '../../../assets/images/logo/EOS.png'
+import XTZ from '../../../assets/images/logo/XTZ.png'
 
 export default function ContentHomeOne() {
 
@@ -18,10 +22,10 @@ export default function ContentHomeOne() {
                 <div><a href="" className="btn btn-flat">Start earning</a></div>
             </div>
             <div className="contentOne-col">
-                    <div className="contentOne-data"><img src={XLM} width='28px' height='28px' alt="" />     Bitcoin SYM</div>
-                    <div className="contentOne-data"><img src={XLM} width='28px' height='28px' alt="" />     Bitcoin SYM</div>
-                    <div className="contentOne-data"><img src={XLM} width='28px' height='28px' alt="" />     Bitcoin SYM</div>
-                    <div className="contentOne-data"><img src={XLM} width='28px' height='28px' alt="" />     Bitcoin SYM</div>
+                    <div className="contentOne-data"><img src={XTZ} width='28px' height='28px' alt="" />Tezos <span className="grey">XTZ</span> </div>
+                    <div className="contentOne-data"><img src={DAI} width='28px' height='28px' alt="" />Dai <span className="grey">DAI</span>  </div>
+                    <div className="contentOne-data"><img src={EOS} width='28px' height='28px' alt="" />EOS <span className="grey">EOS</span>   </div>
+                    <div className="contentOne-data"><img src={XLM} width='28px' height='28px' alt="" />Stellar Lumens <span className="grey">XLM</span> </div>
             </div>
           </div>  
         </>

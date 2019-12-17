@@ -11,7 +11,9 @@
     display: flex;
     flex-direction: column;
 }
-
+.contentOne-col span.grey{
+    color:lightgrey;
+}
 .contentOne-col h2{
     font-size:36px;
     margin:35px 0px;
@@ -21,8 +23,12 @@
 }
 
 
-
 .contentOne-data{
     margin:20px; 
-    font-size:28px;   
+    font-size:20px;
+    
+}
+
+.contentOne-data img{
+    padding-right:25px;
 }
