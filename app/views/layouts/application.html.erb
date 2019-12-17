@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sunshiney|ZCOOL+KuaiLe&display=swap" rel="stylesheet">
     <script src="https://use.fontawesome.com/2af014eb75.js"></script>
-
+<script type="text/javascript" src="canvasjs.min.js"></script>
     <%= favicon_link_tag asset_path('favicon.ico') %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -22,9 +22,11 @@
           <%= current_user.watchlist.coins.map{|el| el['name'] = {name: el['name'], id: el['id']} }.to_json.html_safe %>
       </script>
   <% end %>
+
   </head>
 
   <body>
+  
     <%= yield %>
   </body>
 </html>

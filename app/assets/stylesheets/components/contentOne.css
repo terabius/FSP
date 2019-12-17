@@ -1,10 +1,12 @@
 .contentOne-container{
     display:flex;
-    justify-content: space-around;
+    /*justify-content: space-between;*/
     margin:50px 0px;
     background-color:white;
 }
-
+.contentOne-col:first-child{
+    margin-right: 320px;
+}
 .contentOne-col{
     display: flex;
     flex-direction: column;
@@ -21,5 +23,6 @@
 
 
 .contentOne-data{
-    margin:20px;    
+    margin:20px; 
+    font-size:28px;   
 }
