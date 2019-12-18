@@ -45,11 +45,14 @@ export default class PriceItem extends Component {
             <>
             <div className="price-element-border"> 
             <div className="price-header pad-correction">
+                
                 <div>
+                    
                     <div style={{color:'grey'}}>{this.props.number + 1}</div>
                     <div className='price-name'>
                     <img src={BTC} alt="bitcoin" width='30px' height='30px'/>
                         {this.props.name}</div>
+                       
                 </div>
                 <div>  
                     <div className='price-data'>${this.props.price.toFixed(2)}</div>
@@ -59,7 +62,7 @@ export default class PriceItem extends Component {
                     <div className='price-data'>
                         <i className="fa fa-3x fa-star" aria-hidden="true" style={this.star()} onClick={this.handleFollow}></i>
                     </div>
-                </div>
+                </div> 
             </div>
             </div> 
             </>

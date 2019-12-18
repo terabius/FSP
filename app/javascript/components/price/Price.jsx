@@ -77,8 +77,10 @@ const renderRow = (assets, wallets) => {
 }
 
 const handleSearch = (event) => {
-    // console.log(event.target.value)
+   
     let assets = document.querySelectorAll('.price-item');
+    console.log(assets);
+    
     let input = event.target.value.toUpperCase();
     assets.forEach((crypto) => {
         if(crypto.childNodes[1].textContent.toUpperCase().indexOf(input) > -1){
