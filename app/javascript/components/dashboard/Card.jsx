@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {fetchHistory} from '../../util/wallets_v1_util'
+import { LineChart, Line } from 'recharts'
 
 import BTC from '../../../assets/images/logo/BTC.png'
 import BCH from '../../../assets/images/logo/BCH.png'
@@ -7,6 +8,18 @@ import ETH from '../../../assets/images/logo/ETH.png'
 import XLM from '../../../assets/images/logo/XLM.png'
 import EOS from '../../../assets/images/logo/EOS.png'
 import XRP from '../../../assets/images/logo/XRP.png'
+
+const SimpleLineChart = function () {
+    let data = [];
+    for (let i = 0; i < 30; i += 1) {
+        data.push({ pv: (100 + Math.floor(Math.random() * 100)) })
+    }
+    return (
+        <LineChart width={100} height={50} data={data}>
+            <Line type="monotone" dataKey="pv" dot={false} strokeWidth='2' stroke="lightgrey" />
+        </LineChart>
+    );
+}
 
 
 export default class Card extends Component {
@@ -56,6 +69,7 @@ export default class Card extends Component {
 
 
                 <div className="card-chart">
+                    {SimpleLineChart()}
                     <canvas id={this.props.name} >
 
                     </canvas>

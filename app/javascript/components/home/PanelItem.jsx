@@ -12,12 +12,11 @@ const SimpleLineChart = function(){
         data.push({ pv: (100 + Math.floor(Math.random() * 100) )})
     }
         return (
-            <LineChart width={100} height={50} data={data}
-            >
+            <LineChart width={100} height={50} data={data}>
                 <Line type="monotone" dataKey="pv" dot={false} strokeWidth='2' stroke="lightgrey" />
             </LineChart>
         );
-    }
+}
 
 export default class PanelItem extends Component {
     constructor(props){

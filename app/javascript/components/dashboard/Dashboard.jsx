@@ -10,18 +10,20 @@ const Dashboard = ({wallets,assets}) => {
                 <div className="dash-title">Following</div>
                 <div className="dash-kid">
                     { Object.keys(wallets).map((el) =>
-                        <div className="crypto-view" key={el}><Card 
-                        symbol={el}
-                        name={assets[el].name}
-                        time={'24h'}
-                        price={assets[el].quote.USD.price}
-                        percentage={assets[el].quote.USD.percent_change_24h}
-                        />
-                       
+                        <div className="crypto-view" key={el}>
+                            <Card 
+                                symbol={el}
+                                name={assets[el].name}
+                                time={'24h'}
+                                price={assets[el].quote.USD.price}
+                                percentage={assets[el].quote.USD.percent_change_24h}
+                            />
                         </div>
                     )}
                 </div>
-                <Link to='/price' className='className="dash-title"'>Discover more #LINK</Link>
+                <div className="dash-footer">
+                    <Link to='/price' >Discover more assets > </Link>
+                </div>
             </div>
         </React.Fragment>
     );
