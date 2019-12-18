@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import {add ,remove } from '../../actions/wallets_actions'
 
+import BTC from '../../../assets/images/logo/BTC.png'
+
 export default class PriceItem extends Component {
     constructor(props){
         super(props);
@@ -21,10 +23,10 @@ export default class PriceItem extends Component {
 
     star = () =>{
         const followed = {
-            color: 'yellow',
+            color: '#F4C623',
         };
         const style = {
-            color: 'black',
+            color: 'grey',
         }
         
         if (Object.keys(this.props.wallets).includes(this.props.symbol)){
@@ -40,18 +42,26 @@ export default class PriceItem extends Component {
         const percentIsPos = (this.props.change > 0);
 
         return (
-            <>  
-                <div className="price-item">
-                    <div>{this.props.number}</div>
-                    <div className='crypto-name'>{this.props.name}</div>
-                    <div>${this.props.price.toFixed(2)}</div>
-                    <div style={percentIsPos ? divGreen : divRed }>{this.props.change.toPrecision(2)}%</div>
-                    <div>{this.props.market.toPrecision(3)}</div>
-                    <div><button className='btn btn-flat' disabled>Trade</button></div>
-                    <div>
+            <>
+            <div className="price-element-border"> 
+            <div className="price-header pad-correction">
+                <div>
+                    <div>{this.props.number + 1}</div>
+                    <div className='price-name'>
+                    <img src={BTC} alt="bitcoin" width='30px' height='30px'/>
+                        {this.props.name}</div>
+                </div>
+                <div>  
+                    <div className='price-data'>${this.props.price.toFixed(2)}</div>
+                    <div className='price-data' style={percentIsPos ? divGreen : divRed }>{this.props.change.toPrecision(2)}%</div>
+                    <div className='price-data'>${this.props.market.toPrecision(3)}</div>
+                    <div className='price-data'><button className='btn btn-flat price-btn' disabled>Trade</button></div>
+                    <div className='price-data'>
                         <i className="fa fa-3x fa-star" aria-hidden="true" style={this.star()} onClick={this.handleFollow}></i>
                     </div>
                 </div>
+            </div>
+            </div> 
             </>
         )
     }

@@ -10,14 +10,17 @@ export default function Price({assets, wallets}) {
 
             <div className="price-tableau">
                 <div className="price-header">
-                    <div>#</div>
-                    <div>Name</div>
-                    <div>Price</div>
-                    <div>Change</div>
-                    <div>Market Cap</div>
-                    <div>Trade</div>
-                    <div>Follow</div> 
-                </div>  
+                        <div>
+                            #<div className='price-name'>Name</div>
+                        </div>
+                        <div>
+                            <div className='price-data'>Price</div>
+                            <div className='price-data'>Change</div>
+                            <div className='price-data'>Market Cap</div>
+                            <div className='price-data'>Trade</div>
+                            <div className='price-data'>Follow</div>
+                        </div>
+                </div>
                 <div>
                     {renderRow(assets,wallets)}
                 </div>

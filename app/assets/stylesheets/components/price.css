@@ -10,25 +10,68 @@
 .price-tableau{
     display: flex;
     flex-direction: column;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    max-height: 661px;
+    overflow: hidden;
+    margin:0 0 55px 0;
 }
 
 .price-header{
     display: flex;
-    justify-content: space-between;
-    border: 1px solid grey;
-    padding:30px
+    padding:20px 10px;
 }
 
+.price-header>*{
+    display: flex;
+    align-items: center;
+    color: grey;
+}
+
+.price-header>*:first-child{
+    padding-left: 13px;
+    width: 40%;
+}
+.price-header>*:last-child{
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+}
+.price-data{
+    width:calc(15%);
+}
+.price-data:last-child{
+    width:calc(10%);
+}
+.price-name{
+    display: flex;
+    align-items: center;
+    padding:0px 49px;
+}
+.price-name img{
+    padding:0px 15px 0 0;
+}
 .price-item{
     display: flex;
     justify-content: space-between;
-    border: 1px solid grey;
+    border: 1px solid lightgray;
+    border-width:1px 0 0 0;
     padding: 20px;
 }
-
-.yellow {
-    color:yellow;
+.price-element-border{
+    border:1px solid lightgray;
+    border-width: 1px 0 0 0;
 }
-.fa{
-    size:50px;
+.pad-correction{
+    padding:11px 10px;
+}
+
+.price-btn{
+    padding:15px 15px;
+}
+
+
+.fa-3x{
+    font-size:30px;
+    
 }
