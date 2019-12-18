@@ -46,7 +46,7 @@ export default class PriceItem extends Component {
             <div className="price-element-border"> 
             <div className="price-header pad-correction">
                 <div>
-                    <div>{this.props.number + 1}</div>
+                    <div style={{color:'grey'}}>{this.props.number + 1}</div>
                     <div className='price-name'>
                     <img src={BTC} alt="bitcoin" width='30px' height='30px'/>
                         {this.props.name}</div>
