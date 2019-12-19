@@ -49,7 +49,7 @@ export default function NavbarModule({currentUserId, logout}) {
                 <div className="flex-item-navbar item-center-nav">
                     <Link className="anchor mid black" to='/dashboard'>Home</Link>
                     <Link className="anchor mid black" to='/price'>Price</Link>
-                    <Link className="anchor mid black" to='/account'>Account</Link>
+                    <Link className="anchor mid black" to='/account'>Portfolio</Link>
                 </div>
                 <div className="flex-item-navbar item-right-nav">
                     <div>

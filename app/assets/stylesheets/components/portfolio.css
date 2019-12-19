@@ -1,0 +1,156 @@
+.portfolio-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.portfolio-kid{
+    display:flex;
+    flex-direction: column;
+    
+}
+.portfolio-kid:first-child{
+    width: 65%;
+}
+
+.portfolio-kid:last-child{
+    width: 30%;
+}
+
+.portfolio-balance{
+    width:100%;
+    height: 300px;
+    border:1px solid lightgray;
+    border-radius: 6px;
+    color:grey;
+    overflow: hidden;
+}
+.portfolio-balance *:not(svg){
+    margin:18px;
+}
+.portfolio-balance>span{
+    color:black;
+    font-size:30px;
+}
+
+
+
+
+.portfolio-assets{
+    width:100%;
+    border:1px solid lightgray;
+    border-radius: 6px;
+    color:grey;
+    margin-top:15px;
+}
+
+.portfolio-assets-header{
+    display:flex;
+    flex-direction: column;
+    
+}
+.portfolio-assets-header>h2{
+    margin:18px;
+    font-size: 24px;
+    color:black;
+}
+
+.portfolio-assets-header>p{
+    display: flex;
+    justify-content: space-between;
+    margin:14px 22px;
+    
+}
+
+.portfolio-assets-data{
+    display:flex;
+    flex-direction: column;
+    border:1px solid lightgrey;
+    border-width:1px 0 0 0;
+}
+
+.portfolio-assets-data>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:14px 22px;
+    color:black;
+    font-size:18px;
+    
+}
+.portfolio-assets-data>div>div:first-child{
+    width:calc(38%);
+}
+
+.portfolio-assets-data>div>div:nth-child(2){
+    width:calc(25%);
+}
+.portfolio-assets-data>div>div:last-child{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    width:calc(25%);
+    text-align: right;    
+}
+
+.portfolio-assets-data>div>div:first-child{
+    display: flex;
+    align-items: center;
+}
+
+.portfolio-assets-data>div>div>h4{
+    margin-left:10px;
+}
+
+.mini-circle{
+    width:8px;
+    height:8px;
+    border-radius: 50%;
+    background-color: blue;
+}
+
+.mini-perc{
+    padding:10px;
+}
+
+
+
+
+.portfolio-box{
+    display: flex;
+    flex-direction: column;
+    border:1px solid lightgray;
+    border-width:1px 1px 0px 1px;
+    border-radius: 6px;
+    margin:0 0 20px 0;
+}
+.portfolio-box h2{
+    font-size:18px;
+}
+
+.portfolio-box>div>span{
+    font-size: 18px;
+    color:blue;
+}
+
+.portfolio-box>div>svg{
+    
+}
+
+.portfolio-box:first-child>div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.portfolio-box>*{
+    padding:18px;
+    border:1px solid lightgray;
+    border-width:0 0 1px 0px;
+}
+
+.portfolio-box>*:last-child{
+    border-radius:6px;
+}
+
+.portfolio-box>p>a.btn{
+    padding:12px 32px;
+}

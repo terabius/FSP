@@ -3,8 +3,8 @@
 .flex-container-navbar{
     display: flex;
     justify-content: space-between;
-    min-height: 15vh;
-    margin-bottom: 30px;
+    min-height: 10vh;
+    margin-bottom: 10px;
     
 }
 .white{
