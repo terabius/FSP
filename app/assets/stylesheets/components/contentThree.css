@@ -9,22 +9,25 @@
 
 .contentThree-title{
     min-width: 100%;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
-    color:grey;
+    color:	slategray;
     font-weight: lighter;
     margin:55px auto;
 }
 .contentThree-title span{
     display: block;
-    font-size:42px;
-    color:black;
+    font-size:40px;
+    font-weight: bold;
+    color:#0F3257;
+    
     padding-bottom: 8px;
 }
 
 .contentThree-data{
     display:flex;
     min-width: 100%;
+    margin-top: 100px;
     overflow:hidden;
 }
 
@@ -42,15 +45,19 @@
 }
 
 .contentThree-subdata div>h3{
-    font-size: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0F3257;
     text-align: center;
     padding:25px 0px;
 }
 
 .contentThree-subdata div>p {
-    color:grey;
+    line-height: 1.6;
+    font-weight: lighter;
+    color:slategrey;
     text-align: center;
-    padding:25px 0px;
+    padding:14px 0px 23px 0px;
 }
 .contentThree-subdata div>a{
     display: block;

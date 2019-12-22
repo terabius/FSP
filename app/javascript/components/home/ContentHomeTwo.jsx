@@ -68,9 +68,7 @@ export default function ContentHomeTwo() {
             </div>
             <div className="contentTwo-data">
                 <div className="contentTwo-img">
-                
-                        <img src={coinscreen} alt=""  />
-                   
+                        <img src={coinscreen} alt="screenshot"  />
                 </div>
             </div>
         </div>
