@@ -8,9 +8,8 @@ export default function HookHome() {
 
             <div className="email-group">
                 <input className="email-input" type="text" placeholder="Email address" />
-                
                 <button name="button" type="submit" className="btn btn-flat green">
-                    Get Started
+                    Get started
                 </button>
             </div>
 

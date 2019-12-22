@@ -9,10 +9,11 @@
 .flex-container-navbar{
     display: flex;
     flex-direction: row;
+    align-items: center;
     height: 72px;
     min-height: 26px;
     width: 100%;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     
 }
 
@@ -43,7 +44,7 @@
 .anchor{
     font-size:16px;
     margin-right: 10px;
-    font-weight: 200;
+    font-weight: bold;
     text-decoration: none;
 }
 

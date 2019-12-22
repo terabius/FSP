@@ -5,14 +5,19 @@
 .megatitle{
     color:white;
     font-size:48px;
+    line-height: 52px;
+    font-weight: bolder;
     text-align: center;
 }
 
 .subtitle{
     color:white;
     font-size: 16px;
+    line-height: 28px;
+    font-weight: lighter;
     text-align: center;
-    margin:24px auto; 
+    margin:24px auto;
+    margin-bottom: 32px; 
 }
 
 .email-group{
@@ -31,21 +36,19 @@
   padding: 13px 16px 15px 16px;
 }
 
-input{
+.email-group input{
   font-weight: lighter;
   font-size:19px
 }
-input::placeholder {
+.email-group input::placeholder {
   color:grey;
   font-size: 16px;
 }
 
-input:placeholder-shown{
-  font-size: 19px;
-}
-
 .email-group .green{
   border-color: rgb(5, 177, 105);
+  
+  font-size: 16px;
 }
 
 .green{
