@@ -1,0 +1,48 @@
+.contentFive-container{
+    display: flex;
+    flex-direction: column;
+    margin:90px 0;
+}
+
+.contentFive-header{
+    min-width: 100%;
+    font-size: 18px;
+    text-align: center;
+    color:	slategray;
+    font-weight: lighter;
+    margin:0 0 65px 0;
+}
+
+.contentFive-header span{
+    display: block;
+    font-size:44px;
+    font-weight: bold;
+    color:#0F3257;
+    padding-bottom: 18px;
+}
+
+.contentFive-data{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.contentFive-data>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:#0F3257;
+    width: calc(100%/5);
+}
+.contentFive-data>div .line{
+    color: black;
+    display: block;
+    border:1px solid lightgrey;
+    width: 80%;
+}
+.contentFive-data>div svg{
+    
+    padding-bottom: 26px;
+}

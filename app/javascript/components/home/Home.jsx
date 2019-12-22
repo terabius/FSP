@@ -1,10 +1,14 @@
 import React, { Component } from 'react'
+
 import HookHome from './HookHome'
 import Panel from './Panel'
 import ContentHomeOne from './ContentHomeOne'
 import ContentHomeTwo from './ContentHomeTwo'
 import ContentHomeThree from './ContentHomeThree'
 import ContentHomeFour from './ContentHomeFour'
+import ContentHomeFive from './ContentHomeFive'
+import ContentHomeSix from './ContentHomeSix'
+
 import FooterHome from './FooterHome'
 
 export default class Home extends Component {
@@ -18,6 +22,8 @@ export default class Home extends Component {
                 <ContentHomeTwo />
                 <ContentHomeThree />
                 <ContentHomeFour />
+                <ContentHomeFive />
+                <ContentHomeSix />
                 <FooterHome />
             </React.Fragment>
             )
