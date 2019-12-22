@@ -1,8 +1,6 @@
 .contentSix-container{
     display: flex;
     background-color: #E8F6FF;
-    /* width: 100vw; */
-    /* margin-left: calc(-12%); */
     height: 460px;
     margin-bottom: 95px;
 }
