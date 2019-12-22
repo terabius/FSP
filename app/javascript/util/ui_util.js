@@ -1,5 +1,6 @@
 export const loggedInUi = () => {
-    document.body.style.background = 'white';
+    const generalContainer = document.getElementById('general-container');
+    generalContainer.style.background = 'white';
     const ele = document.querySelectorAll('.white');
     Array.prototype.map.call(ele,(el) => {
         el.classList.remove('white');

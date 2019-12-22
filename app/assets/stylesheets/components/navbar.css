@@ -3,26 +3,26 @@
 .flex-container-navbar{
     display: flex;
     justify-content: space-between;
-    min-height: 10vh;
+    height: 72px;
+    min-height: 26px;
+    width: 100%;
     margin-bottom: 10px;
     
 }
+
 .white{
     color:white;
 }
 .black{
     color:black;
 }
-.black{
-    color:black;
-}
+
 .logo{
     
     font-weight: bolder;
-    font-size:25px;
-    font-family: 'ZCOOL KuaiLe', cursive;
+    font-size:22px;
     margin-right:68px;
-       text-decoration: none      !important;
+    text-decoration: none      !important;
 
 }
 /* child element of the nav */
@@ -31,6 +31,7 @@
     display: flex;
     align-self: center;
     justify-content: space-between;
+    
 }
 
 

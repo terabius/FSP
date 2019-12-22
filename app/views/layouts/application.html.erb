@@ -4,10 +4,15 @@
     <title>FSP</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sunshiney|ZCOOL+KuaiLe&display=swap" rel="stylesheet">
     <script src="https://use.fontawesome.com/2af014eb75.js"></script>
+
     <%= favicon_link_tag asset_path('favicon.ico') %>
+
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'entry' %>
@@ -20,9 +25,14 @@
           <%= current_user.watchlist.coins.map{|el| el['name'] = {name: el['name'], id: el['id']} }.to_json.html_safe %>
       </script>
   <% end %>
+
   </head>
 
   <body>
-    <%= yield %>
+    <div id="general-container">
+      <%= yield %>
+    </div>
   </body>
+
+
 </html>

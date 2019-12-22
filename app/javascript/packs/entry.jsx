@@ -38,7 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
     delete window.currentUser;
     delete window.wallet;
   } else {
-    document.body.classList.add('blue');
+    
+    const generalContainer = document.getElementById('general-container');
+    generalContainer.classList.add('blue');
     const ele = document.querySelectorAll('.logo');
     
     Array.prototype.map.call(ele, (el) => {

@@ -40,7 +40,7 @@ export default class Registration extends Component {
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-title-flex">
-                        <h2 className='form-title'>Join Groinbase:</h2>
+                        <h2 className='form-title'>Join Kroinbase:</h2>
                     </div>
 
                     <div className="forms">

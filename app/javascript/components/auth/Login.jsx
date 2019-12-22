@@ -38,7 +38,7 @@ export default class Login extends Component {
             <div>
             <form onSubmit={this.handleSubmit}>
             <div className="form-title-flex">
-            <h2 className='form-title'>Sign in to Groinbase:</h2>
+            <h2 className='form-title'>Sign in to Kroinbase:</h2>
             </div>
             <div className='forms login'>
 
