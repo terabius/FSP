@@ -10,7 +10,7 @@ class Navbar extends React.Component {
         return (
             <div className="flex-container-navbar">
                 <div className="flex-item-navbar item-left-nav logo white">
-                    <h1 style={store.getState().session.id ? style : null}>KROINBASE</h1>
+                    <h1 style={store.getState().session.id ? style : null}>koinbase</h1>
                 </div>
                 <NavbarModuleContainer />
             </div>

@@ -1,20 +1,20 @@
 /* structure of the nav */
+.white{
+    color:white;
+}
+.black{
+    color:black;
+}
 
 .flex-container-navbar{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     height: 72px;
     min-height: 26px;
     width: 100%;
     margin-bottom: 10px;
     
-}
-
-.white{
-    color:white;
-}
-.black{
-    color:black;
 }
 
 .logo{
@@ -25,37 +25,37 @@
     text-decoration: none      !important;
 
 }
+
 /* child element of the nav */
 
 .flex-item-navbar{
     display: flex;
-    align-self: center;
+    align-items: center;
     justify-content: space-between;
-    
 }
 
 
 /* left */
 
-.item-left-nav{
+/* .item-left-nav{
 flex: 0 0 auto;
-}
+} */
 
 /* center  */
 
-.item-center-nav{    
+/* .item-center-nav{    
 flex: 1 0 auto;
 justify-content: flex-start;
-}
+} */
 
 /* right  */
 
-.item-right-nav{  
+/* .item-right-nav{  
     flex: 0 0 auto;
-}
+} */
 
 .anchor{
-    font-size:20px;
+    font-size:16px;
     margin-right: 10px;
     font-weight: 200;
     

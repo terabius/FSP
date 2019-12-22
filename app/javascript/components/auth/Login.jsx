@@ -12,6 +12,7 @@ export default class Login extends Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.handleDemo = this.handleDemo.bind(this);
     }
 
     handleSubmit(event) {
@@ -32,7 +33,19 @@ export default class Login extends Component {
         });
     }
     
- 
+    handleDemo() {
+        
+        setTimeout(() => {
+
+            const emailField = document.getElementById('email').value = 'demo@demo.demo';
+            const password = document.getElementById('password').value = 'password';
+            const sub = document.getElementById('sub');
+            sub.click();
+        }
+            , 2000);
+
+    }
+
     render() {
         return (
             <div>
@@ -58,6 +71,10 @@ export default class Login extends Component {
            
             <button type='submit' id='sub' className='btn btn-flat'>
                 Login
+            </button>
+
+            <button className='btn btn-flat' onClick={this.handleDemo}>
+                Demo
             </button>
 
             </div>
