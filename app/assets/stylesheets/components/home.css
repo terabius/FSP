@@ -1,25 +1,85 @@
+.hookhome{
+  padding: 59px 48px;
+}
+
 .megatitle{
     color:white;
-    font-size:67px;
+    font-size:48px;
     text-align: center;
-    margin: 0px 0px 20px 0px;
 }
 
 .subtitle{
     color:white;
-    font-size: 25px;
+    font-size: 16px;
     text-align: center;
-    margin-bottom:30px; 
+    margin:24px auto; 
 }
 
+.email-group{
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.email-input {
+  line-height: 1.75;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  border: 1px solid #E7E7E7;
+  width:25%;
+  border-radius: 4px;
+  margin-right: 8px;
+  padding: 13px 16px 15px 16px;
+}
+
+input{
+  font-weight: lighter;
+  font-size:19px
+}
+input::placeholder {
+  color:grey;
+  font-size: 16px;
+}
+
+input:placeholder-shown{
+  font-size: 19px;
+}
+
+.email-group .green{
+  border-color: rgb(5, 177, 105);
+}
+
+.green{
+   color: white;
+   background: rgb(5, 177, 105);
+   outline: none !important;
+}
+
+.green:hover{
+  color: white;
+  background: rgb(5, 160, 95);
+  outline: none !important;
+}
+
+
+
+
+
+.search-form-control .form-control:focus {
+  border: 1px solid #1EDD88;
+  outline: none !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+
+/* 
 .flex-home{
     display: flex;
     justify-content: space-around;
-}
+} */
 
-.btn-sub-home {
-    color:white;
-  background: #1EDD88;
+/* .btn-sub-home {
+  color:white;
+  background: rgb(5, 177, 105);
   padding: 8px 24px;
   border-radius: 4px;
   transition: background 0.3s ease;
@@ -27,62 +87,7 @@
 }
 
 .btn-sub-home:hover {
-  background: #1BCB7F;
+  background: rgb(5, 177, 105);
   color: white;
-}
+} */
 
-
-
-.email-group{
-  display: flex;
-  justify-content: center;
-  top: 8px;
-  bottom: 8px;
-  right: 8px;
-}
-
-.green{
-   color: white;
-   background: #1EDD88; 
-   outline: none !important;
-
-}
-
-.green:hover{
-  color: white;
-  background: #1BCB7F;
-  outline: none !important;
-
-}
-
-.email-input {
-  height: 3.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  border: 1px solid #E7E7E7;
-  width:25%;
-  border-radius: 4px;
-  margin-right: 8px;
-}
-
-input::placeholder {
-  color:lightgrey;
-  font-size: 19px;
-  padding: 0 0 0 8px;
-}
-
-input:placeholder-shown{
-  padding: 0 0 0 8px;
-    font-size: 19px;
-}
-
-input{
-  padding: 0 0 0 8px;
-  font-weight: lighter;
-  font-size:19px
-}
-
-.search-form-control .form-control:focus {
-  border: 1px solid #1EDD88;
-  outline: none !important;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
