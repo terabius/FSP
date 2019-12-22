@@ -1,18 +1,42 @@
+.test{
+    
+    border:1px solid lightgrey;
+    border-width:1px 0 0 0;
+       
+}
+
 .footer-container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin:25px auto;
-    border:1px solid grey;
-    border-width: 1px 0 0 0;
-    width:100%;
+    padding:12px 0;
+
     height: 35px;
+}
+.footer-container>div{
+    display: flex;
+    align-items: center;
 }
 
 .footer-container span{
     padding:25px 10px;
 }
+
+.footer-container>div>span:first-child{
+    color:grey;
+    font-weight: lighter;
+}
+
+.footer-container>div:first-child>a{
+    color:#1652F0;
+    display:inline-block;
+    font-size: 14px;
+    font-weight: lighter;
+    text-decoration: none;
+    padding: 8px 8px;
+}
+
 
 .footer-container select{
     width:205px;

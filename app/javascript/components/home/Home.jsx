@@ -9,7 +9,6 @@ import ContentHomeFour from './ContentHomeFour'
 import ContentHomeFive from './ContentHomeFive'
 import ContentHomeSix from './ContentHomeSix'
 
-import FooterHome from './FooterHome'
 
 export default class Home extends Component {
     
@@ -24,7 +23,6 @@ export default class Home extends Component {
                 <ContentHomeFour />
                 <ContentHomeFive />
                 <ContentHomeSix />
-                <FooterHome />
             </React.Fragment>
             )
         }

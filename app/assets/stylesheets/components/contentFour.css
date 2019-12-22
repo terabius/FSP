@@ -2,8 +2,8 @@
     background-color: rgb(22, 82, 240);     
     display: flex;
     justify-content: space-around;
-    width: 100vw;
-    margin-left: calc(-1 * ((100vw - 100%) / 2));
+    /* width: 100vw; */
+    /* margin-left: calc(-1 * ((100vw - 100%) / 2)); */
     margin-top:100px;
     margin-bottom: 80px;
     min-height: 220px;
