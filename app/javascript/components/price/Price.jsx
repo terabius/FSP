@@ -78,12 +78,12 @@ const renderRow = (assets, wallets) => {
 
 const handleSearch = (event) => {
    
-    let assets = document.querySelectorAll('.price-item');
-    console.log(assets);
-    
+    let assets = document.querySelectorAll('.price-element-border');
     let input = event.target.value.toUpperCase();
+
     assets.forEach((crypto) => {
-        if(crypto.childNodes[1].textContent.toUpperCase().indexOf(input) > -1){
+        
+        if(crypto.textContent.toUpperCase().indexOf(input) > -1){
             crypto.style.display = '';
         }else{
             crypto.style.display = 'none'; 
