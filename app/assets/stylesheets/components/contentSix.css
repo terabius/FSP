@@ -1,4 +1,5 @@
 .contentSix-container{
+    overflow: hidden;
     display: flex;
     background-color: #E8F6FF;
     height: 460px;

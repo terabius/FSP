@@ -10,7 +10,7 @@ import Registration from './auth/Registration'
 import DashboardContainer from "./dashboard/DashboardContainer"
 import PriceContainer from "./price/PriceContainer"
 import AccountContainer from "./AccountContainer"
-import Footer from './Footer'
+import FooterContainer from './FooterContainer'
 
 export default function App() {
   return (
@@ -24,7 +24,7 @@ export default function App() {
         <ProtectedRoute path='/account' component={AccountContainer} />
         <AuthRoute exact path='/' component={Home} />
       </Switch>
-      <Footer />
+      <FooterContainer />
     </React.Fragment>          
   )
 }

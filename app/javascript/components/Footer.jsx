@@ -1,6 +1,8 @@
 import React from 'react'
 
-export default function Footer() {
+export default function Footer({currentUserId}) {
+    
+    
 
     function logIn(){
         return (
@@ -93,5 +95,5 @@ export default function Footer() {
 
 
 
-    return true ? logIn() : logOut()
+    return currentUserId ? logIn() : logOut()
 }
