@@ -11,7 +11,6 @@ export default class Registration extends Component {
             last_name: '',
             email:'',
             password:''
-            // registrationErrors:''
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -37,40 +36,56 @@ export default class Registration extends Component {
 
     render() {
         return (
-            <div>
+
+            <div className="signup-container">
+
+                <h2 className="signup-title">
+                    Create your account
+                </h2>
+
                 <form onSubmit={this.handleSubmit}>
-                    <div className="form-title-flex">
-                        <h2 className='form-title'>Join Kroinbase:</h2>
-                    </div>
-
-                    <div className="forms">
-                    <input type="text"
-                        className='flex-item-login'
-                        name="first_name" 
-                        placeholder="first_name" 
-                        defaultValue={this.state.first_name} onChange={this.handleChange} required />
                     
-                    <input type="text"
-                        className='flex-item-login'
-                        name="last_name"
-                        placeholder="last_name"
-                        defaultValue={this.state.last_name} onChange={this.handleChange} required />
+                    <div className="forms">
+                        <input type="text"
+                            
+                            name="first_name"
+                            placeholder="First name"
+                            defaultValue={this.state.first_name} 
+                            onChange={this.handleChange} required />
 
-                    <input type="email"
-                        className='flex-item-login'
-                        name="email"
-                        placeholder="email"
-                        defaultValue={this.state.email} onChange={this.handleChange} required />
+                        <input type="text"
+                            
+                            name="last_name"
+                            placeholder="Last name"
+                            defaultValue={this.state.last_name} 
+                            onChange={this.handleChange} required />
 
-                    <input type="password"
-                        className='flex-item-login'
-                        name="password"
-                        placeholder="password"
-                        defaultValue={this.state.passowrd} onChange={this.handleChange} required />
-                        <button className='btn btn-flat'
-                        type='submit'>Register</button>
+                        <input type="email"
+                            
+                            name="email"
+                            placeholder="Email"
+                            defaultValue={this.state.email} 
+                            onChange={this.handleChange} required />
+
+                        <input type="password"
+                            
+                            name="password"
+                            placeholder="Choose password"
+                            defaultValue={this.state.passowrd} 
+                            onChange={this.handleChange} required />
+
+                        <select name="" id="">
+
+                        </select>
+
+                        <input type="radio"/>
+
+                        <button className='btn btn-flat' type='submit'>
+                                Create account
+                        </button>
                     </div>
                 </form>
+                
             </div>
         )
     }
