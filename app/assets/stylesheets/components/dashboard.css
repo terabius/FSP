@@ -13,7 +13,7 @@
     font-size:20px;
     border: 1px solid lightgrey;
     border-width:1px 1px 0px 1px;
-    border-radius:6px;
+    border-radius:6px 6px 0px 0px;
 }
 
 .dash-kid{
@@ -22,7 +22,6 @@
     flex: 1 0 50%;
     border: 1px solid lightgrey;
     border-width:0px 1px 1px 0px;
-    border-radius:6px;
 }
 
 .crypto-view{
@@ -39,7 +38,7 @@
     font-size:20px;
     border: 1px solid lightgrey;
     border-width:0px 1px 1px 1px;
-    border-radius:6px;
+    border-radius:0 0 6px 6px;
     text-align:center;
 }
 
@@ -49,7 +48,9 @@
 }
 
 .dash-container-two{
+    
     display: flex;
+    display: none; /*HIDDING 2 ELEMENTS BECAUSE COINBASE UPDATED*/
     flex-direction: row;
     justify-content: space-between;
     

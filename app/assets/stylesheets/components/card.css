@@ -3,18 +3,24 @@
     flex-direction: column;
 }
 
-.card-info{
-    display: flex;
-    flex-direction: column;
-}
 
 .card-sub-info{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex:0 0 10%; 
     padding: 10px 18px;   
 }
-
+.card-sub-info:first-child{
+    padding-bottom: 0px;
+}
+.card-sub-info>div:first-child{
+    display: flex;
+    align-items: center;
+}
+.card-sub-info img{
+    margin-right: 8px;
+}
 .card-chart{
     flex:0 0 80%;
 }

@@ -1,4 +1,6 @@
 export const loggedInUi = () => {
+    const logo = document.getElementById('logo');
+    logo.classList.add('special-blue');
     const generalContainer = document.getElementById('general-container');
     generalContainer.style.background = 'white';
     const ele = document.querySelectorAll('.white');
@@ -10,6 +12,8 @@ export const loggedInUi = () => {
 
 
 export const loggedOutUi = () => {
+    const logo = document.getElementById('logo');
+    logo.classList.remove('special-blue');
     const generalContainer = document.getElementById('general-container');
     generalContainer.style.background = 'rgb(22, 82, 240)';
     const ele = document.querySelectorAll('.black');

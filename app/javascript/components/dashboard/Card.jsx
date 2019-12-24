@@ -17,7 +17,7 @@ const SimpleLineChart = function () {
     const colors = ['lightgrey','red','green','black','orange','blue','purple','yellow'];
     const colorChoice = colors[Math.floor(Math.random()*7)];
     return (
-        <LineChart width={360} height={100} data={data}>
+        <LineChart width={370} height={130} data={data}>
         <Line type="monotone" dataKey="pv" dot={false} strokeWidth='2' stroke={colorChoice} />
         </LineChart>
         );
@@ -28,7 +28,6 @@ export default class Card extends Component {
         
     constructor(props){
         super(props);
-        this.popButton = this.popButton.bind(this);
     }
 
     componentDidMount(){
@@ -38,11 +37,6 @@ export default class Card extends Component {
                 res['Data']['Data']));
     }
     
-    popButton(){
-        console.log('NEED TO IMPLEMENT ME !!');
-        
-    }
-
 
     render() {
         const arr = [BTC,BCH,ETH,XLM,EOS,XRP];
@@ -53,30 +47,28 @@ export default class Card extends Component {
         const percentIsPos = (this.props.percentage>0);
                 
         return (
-                    <>                
-                    <div className="card-container" onMouseOver={()=>this.popButton()}>
-                    
-                    <div className="card-sub-info">
-                    
-                    <div>
-                    
-                    <img src={arr[idx]} alt="btc" width='28px' height='28px'/>
-                    <span className='card-name'>{this.props.name}</span>
-                    </div>
-                    <div>{this.props.time}</div>
-                    </div>
-                    
-                    <div className='card-sub-info'>
-                    <div className='card-price'>${this.props.price.toFixed(2)}</div>
-                    <div style={percentIsPos ? divGreen : divRed }>{this.props.percentage.toPrecision(2)}%</div>
-                    </div> 
-                    
-                    <div className="card-chart">
-                    {SimpleLineChart()}
-                    
-                    </div>
-                    </div>
-                    </>
+                        <>                
+                        <div className="card-container"> 
+                        
+                            <div className="card-sub-info">
+                                <div>
+                                    <img src={arr[idx]} alt="btc" width='28px' height='28px'/>
+                                    <span className='card-name'>{this.props.name}</span>
+                                </div>
+                                <div>{this.props.time}</div>
+                            </div>
+                        
+                            <div className='card-sub-info'>
+                                <div className='card-price'>${this.props.price.toFixed(2)}</div>
+                                <div style={percentIsPos ? divGreen : divRed }>{this.props.percentage.toPrecision(2)}%</div>
+                            </div> 
+                        
+                            <div className="card-chart">
+                                {SimpleLineChart()}
+                        
+                            </div>
+                        </div>
+                        </>
                 )
     }
                               

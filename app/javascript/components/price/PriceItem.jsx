@@ -16,7 +16,7 @@ export default class PriceItem extends Component {
             event.target.style.color = 'black';
         }
         else{
-            event.target.style.color='yellow';
+            event.target.style.color = '#F4C623';
             store.dispatch(add(this.props.symbol));
         }
     }

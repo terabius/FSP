@@ -4,10 +4,11 @@ import {Link} from 'react-router-dom'
 import NavbarModuleContainer from './NavbarModuleContainer';
 
 class Navbar extends React.Component {
-
+   
     
  
     scrollFunction(){
+        
         const navbar = document.querySelector('.flex-container-navbar');
         const logo = document.getElementById('logo');
         const items =document.querySelectorAll('.anchor');
@@ -36,7 +37,7 @@ class Navbar extends React.Component {
         return (
             <div className="flex-container-navbar" id='navbar'>
                 <div className="flex-item-navbar logo white" id='logo'>
-                    <Link to='/' style={store.getState().session.id ? style : null}>koinbase</Link>
+                    <Link to='/dashboard' style={store.getState().session.id ? style : null}>koinbase</Link>
                 </div>
                 <NavbarModuleContainer />
             </div>
