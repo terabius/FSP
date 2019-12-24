@@ -1,5 +1,5 @@
 import React from "react"
-import {Switch} from "react-router-dom"
+import {Route,Switch} from "react-router-dom"
 
 import {AuthRoute, ProtectedRoute} from '../util/route_util'
 
@@ -12,7 +12,7 @@ import PriceContainer from "./price/PriceContainer"
 import AccountContainer from "./AccountContainer"
 import FooterContainer from './FooterContainer'
 
-export default function App() {
+export default function App(props) {
   return (
     <React.Fragment>
       <Navbar />
@@ -24,7 +24,9 @@ export default function App() {
         <ProtectedRoute path='/account' component={AccountContainer} />
         <AuthRoute exact path='/' component={Home} />
       </Switch>
+      
       <FooterContainer />
+      
     </React.Fragment>          
   )
 }

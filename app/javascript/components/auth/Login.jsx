@@ -7,15 +7,23 @@ import {loggedInUi} from '../../util/ui_util'
 export default class Login extends Component {
     constructor(props) {
         super(props);
-        document.body.classList.add('special-body-blue');
         this.state = {
             email: '',
             password: '' 
         }
-
+        
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleDemo = this.handleDemo.bind(this);
+    }
+    
+    componentDidMount(){
+        document.body.classList.add('special-body-blue');
+
+    }
+    componentWillUnmount(){
+        document.body.classList.remove('special-body-blue');
+
     }
 
     handleSubmit(event) {
@@ -24,7 +32,6 @@ export default class Login extends Component {
         store.dispatch(login(user))
         .then(()=> {
             loggedInUi();
-            document.body.classList.remove('special-body-blue');
             this.props.history.push('/dashboard');
         });
     }

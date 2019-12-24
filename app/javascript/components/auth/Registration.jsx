@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
+
 import { signup } from '../../actions/session_actions'
 import {loggedInUi} from '../../util/ui_util'
 
@@ -14,6 +16,15 @@ export default class Registration extends Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
+    }
+
+    componentDidMount() {
+        document.body.classList.add('special-body-blue');
+
+    }
+    componentWillUnmount() {
+        document.body.classList.remove('special-body-blue');
+
     }
 
     handleSubmit(event) {
@@ -90,13 +101,14 @@ export default class Registration extends Component {
                         </button>
 
                         <div>
-                               <p> <a href="">Sign in</a> to your Coinbase account or</p>
-                               <p> <a href="">Sign up</a> as a business.</p>
+                               <p> <Link to='/signin'>Sign in</Link> to your Coinbase account or</p>
+                               <p> <Link to='/signup'>Sign up</Link> as a business.</p>
                         </div>
 
                 </form>
 
-                <p>Already have a Coinbase account? Log in</p>
+                <p>Already have a Coinbase account? 
+                   <Link to='/signin'> Log in</Link></p>
 
             </div>
         )

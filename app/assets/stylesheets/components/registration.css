@@ -25,10 +25,6 @@
 
 }
 
-.signup-container form>*{
-    /* padding: 9px; */
-    /* margin-bottom: 10px; */
-}
 
 .signup-container>form input[type=text],
 .signup-container>form input[type=password],
@@ -53,6 +49,7 @@
 }
 
 .signup-container>form>select{
+    height: 60px;
     border: 1px solid lightgray;
     font-size: 22px;
     font-weight: lighter;
@@ -88,5 +85,13 @@
     margin-top: 5px;
 }
 .signup-container>form>div:last-child p>a{
+    color:rgb(22,82,240);
     text-decoration: none;
+}
+.signup-container>p:last-child{
+    color: white;
+}
+.signup-container>p:last-child>a{
+    text-decoration: none;
+    color: white;
 }

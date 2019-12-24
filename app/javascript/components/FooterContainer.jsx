@@ -5,6 +5,7 @@ import Footer from './Footer'
 
 const mapStateToProps = (state) => ({
     currentUserId: state.session.id
+    
 });
 
 const mapDispatchToProps = (dispatch) => ({
