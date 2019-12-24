@@ -8,6 +8,7 @@ export const loggedInUi = () => {
     });
 };
 
+
 export const loggedOutUi = () => {
     document.body.style.background = 'rgb(22, 82, 240)';
     const ele = document.querySelectorAll('.black');

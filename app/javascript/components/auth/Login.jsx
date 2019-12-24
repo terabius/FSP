@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+
 import {login} from '../../actions/session_actions'
 
 import {loggedInUi} from '../../util/ui_util'
@@ -6,6 +7,7 @@ import {loggedInUi} from '../../util/ui_util'
 export default class Login extends Component {
     constructor(props) {
         super(props);
+        document.body.classList.add('special-body-blue');
         this.state = {
             email: '',
             password: '' 
@@ -22,6 +24,7 @@ export default class Login extends Component {
         store.dispatch(login(user))
         .then(()=> {
             loggedInUi();
+            document.body.classList.remove('special-body-blue');
             this.props.history.push('/dashboard');
         });
     }
