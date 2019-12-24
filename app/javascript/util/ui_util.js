@@ -10,7 +10,8 @@ export const loggedInUi = () => {
 
 
 export const loggedOutUi = () => {
-    document.body.style.background = 'rgb(22, 82, 240)';
+    const generalContainer = document.getElementById('general-container');
+    generalContainer.style.background = 'rgb(22, 82, 240)';
     const ele = document.querySelectorAll('.black');
     Array.prototype.map.call(ele, (el) => {
         el.classList.remove('black');
