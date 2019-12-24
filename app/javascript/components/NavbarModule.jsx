@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {Link, NavLink} from 'react-router-dom'
 import { loggedOutUi } from '../util/ui_util';
 
 
@@ -21,7 +21,7 @@ export default function NavbarModule({currentUserId, logout}) {
         <div className="flex-item-navbar">
             <div>
                 <Link className="anchor white" to='/signin' id='sign'>Sign in</Link>
-                <Link className="btn btn-flat" to='/signup'>Get started</Link>
+                <Link className="btn btn-flat" to='/signup' id='signup'>Get started</Link>
             </div>
         </div>
 
@@ -34,9 +34,9 @@ export default function NavbarModule({currentUserId, logout}) {
     const loggedIn = () => (
             <>
                 <div className="flex-item-navbar">
-                    <Link className="anchor mid black" to='/dashboard'>Home</Link>
-                    <Link className="anchor mid black" to='/price'>Price</Link>
-                    <Link className="anchor mid black" to='/account'>Portfolio</Link>
+                    <NavLink className="anchor mid black" activeClassName="nav-selected" to='/dashboard'>Home</NavLink>
+                    <NavLink className="anchor mid black" activeClassName="nav-selected" to='/account'>Portfolio</NavLink>
+                    <NavLink className="anchor mid black" activeClassName="nav-selected" to='/price'>Prices</NavLink>
                 </div>
 
                 <div className="flex-item-navbar">

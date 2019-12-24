@@ -5,6 +5,12 @@
 .black{
     color:black;
 }
+.special-blue{
+    color: rgb(22,82,240);
+}
+.special-green{
+    background-color:rgb(5,177,105);
+}
 
 .flex-container-navbar{
     display: flex;
@@ -13,10 +19,14 @@
     height: 72px;
     min-height: 26px;
     width: 100%;
-    /* margin-bottom: 10px; */
     
 }
 
+.scrolled{
+    position: sticky;
+    top:0px;
+    background-color: white;
+}
 
 .logo{
     
@@ -26,7 +36,10 @@
     text-decoration: none      !important;
     
 }
-
+.logo a{
+    text-decoration: none;
+    color:inherit;
+}
 /* child element of the nav */
 
 .flex-item-navbar{
@@ -63,4 +76,10 @@
     font-weight: lighter;
     padding:12px 16px;
     margin-left: 16px;
+}
+
+.nav-selected{
+
+    border:1px solid blue;
+    border-width: 0 0 2px 0;
 }
