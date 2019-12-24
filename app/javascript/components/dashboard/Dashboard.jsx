@@ -16,6 +16,9 @@ const Dashboard = ({wallets,assets}) => {
                 <div className="dash-kid">
                     { Object.keys(wallets).map((el) =>
                         <div className="crypto-view" key={el}>
+
+                            <button className="btn btn-flat">View asset</button>
+                            
                             <Card 
                                 symbol={el}
                                 name={assets[el].name}
@@ -27,7 +30,7 @@ const Dashboard = ({wallets,assets}) => {
                     )}
                 </div>
                 <div className="dash-footer">
-                    <Link to='/price' >Discover more assets > </Link>
+                    <Link to='/price'>Discover more assets > </Link>
                 </div>
             </div>
 

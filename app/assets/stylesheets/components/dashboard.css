@@ -29,7 +29,7 @@
     flex: 1 0 auto;
     border: 1px solid lightgrey;
     border-width:1px 0px 0px 1px;
-    
+    position: relative;
 }
 
 .dash-footer{
@@ -112,9 +112,44 @@
     justify-content: center;
     align-items: center;
     width:80px;
-    height: 80px;
-    border:1px solid rgb(233, 192, 12);
-    
-    color:rgb(233, 192, 12);
-    border-radius: 50%;
+    height: 80px; border:1px solid rgb(233, 192, 12); color:rgb(233, 192, 12); border-radius: 50%; }
+
+
+
+
+
+
+.dash-btn-container{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border:1px solid red;    
+    visibility: hidden;
+}
+
+.dash-btn-container:hover{
+    visibility: visible;
+    border: 1px solid blue; 
+}
+
+.crypto-view button{
+    visibility: hidden;
+    position: absolute;
+    left: 125px;
+    top: 81px;
+    z-index: 1;
+    font-size: 14px;
+    padding: 12px 16px;
+    background-color:rgb(5,177,105);
+
+}
+
+.crypto-view button:hover{
+    color: white;
+    background-color: #03995a;
+}
+
+.crypto-view:hover button{
+    visibility: visible;
 }
