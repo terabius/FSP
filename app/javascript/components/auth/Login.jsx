@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {login} from '../../actions/session_actions'
+
 import {loggedInUi} from '../../util/ui_util'
 
 export default class Login extends Component {
@@ -7,9 +8,9 @@ export default class Login extends Component {
         super(props);
         this.state = {
             email: '',
-            password: ''
-            // loginErrors:''
+            password: '' 
         }
+
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handleDemo = this.handleDemo.bind(this);
@@ -20,9 +21,8 @@ export default class Login extends Component {
         const user = this.state;
         store.dispatch(login(user))
         .then(()=> {
-        loggedInUi();
-        this.props.history.push('/dashboard');
-        
+            loggedInUi();
+            this.props.history.push('/dashboard');
         });
     }
     
@@ -48,38 +48,50 @@ export default class Login extends Component {
 
     render() {
         return (
-            <div>
-            <form onSubmit={this.handleSubmit}>
-            <div className="form-title-flex">
-            <h2 className='form-title'>Sign in to Kroinbase:</h2>
-            </div>
-            <div className='forms login'>
+            <>
+            <div className="login-container">
 
-            <input type="email"
-            id='email'
-            className='flex-item-login'
-            name="email"
-            placeholder="email"
-            defaultValue={this.state.email} onChange={this.handleChange} required />
+                <h2 className="login-title">
+                    Sign in to Kroinbase
+                </h2>
+
+                <form onSubmit={this.handleSubmit}>
+                    
+                    <input type="email"
+                            id='email'
+                            name="email"
+                            placeholder="Email"
+                            defaultValue={this.state.email} 
+                            onChange={this.handleChange} required />
             
-            <input type="password"
-            id='password'
-            className='flex-item-login'
-            name="password"
-            placeholder="password"
-            defaultValue={this.state.passowrd} onChange={this.handleChange} required />
+                    <input type="password"
+                            id='password'
+                            name="password"
+                            placeholder="Password"
+                            defaultValue={this.state.passowrd} 
+                            onChange={this.handleChange} required />
            
-            <button type='submit' id='sub' className='btn btn-flat'>
-                Login
-            </button>
+                    <div>
+                        <button className='btn btn-flat' onClick={this.handleDemo}>
+                            Demo
+                        </button>   
 
-            <button className='btn btn-flat' onClick={this.handleDemo}>
-                Demo
-            </button>
+                        <button type='submit' id='sub' className='btn btn-flat'>
+                            SIGN IN
+                        </button>
+                    </div>
+                </form>
+                <div>
+                    <span>
+                    <a href="">Forgot password?</a> ·
+                    <a href="">Don't have an account?</a> ·
+                    <a href="">Privacy Policy</a>
+                    </span>    
+                    <a href="">Have an issue with 2-factor authentication?</a>
+                </div> 
+            </div>
+            </>
 
-            </div>
-            </form>
-            </div>
             )
         }
     }
