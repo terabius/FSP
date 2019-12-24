@@ -44,48 +44,60 @@ export default class Registration extends Component {
                 </h2>
 
                 <form onSubmit={this.handleSubmit}>
-                    
-                    <div className="forms">
+                        <div>
                         <input type="text"
-                            
                             name="first_name"
                             placeholder="First name"
                             defaultValue={this.state.first_name} 
                             onChange={this.handleChange} required />
 
                         <input type="text"
-                            
                             name="last_name"
                             placeholder="Last name"
                             defaultValue={this.state.last_name} 
                             onChange={this.handleChange} required />
-
+                        </div>
                         <input type="email"
-                            
                             name="email"
                             placeholder="Email"
                             defaultValue={this.state.email} 
                             onChange={this.handleChange} required />
 
                         <input type="password"
-                            
                             name="password"
                             placeholder="Choose password"
                             defaultValue={this.state.passowrd} 
                             onChange={this.handleChange} required />
 
-                        <select name="" id="">
-
+                        <select name="usstates" id="usstates">
+                            <option value="Ca">California</option>
+                            <option value="Ny">New York</option>
+                            <option value="Tx">Texas</option>
+                            <option value="Ch">Chicago</option>
                         </select>
 
-                        <input type="radio"/>
+                        <div className='signup-age-controle'>
+                            <input type="checkbox"/>
+                            <p>
+                                I certify that I am 18 years of age or older,
+                                and agree to <br/>
+                                the User Agreement and Privacy Policy.
+                            </p>
+                        </div>
 
                         <button className='btn btn-flat' type='submit'>
                                 Create account
                         </button>
-                    </div>
+
+                        <div>
+                               <p> <a href="">Sign in</a> to your Coinbase account or</p>
+                               <p> <a href="">Sign up</a> as a business.</p>
+                        </div>
+
                 </form>
-                
+
+                <p>Already have a Coinbase account? Log in</p>
+
             </div>
         )
     }
