@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import banner from '../../../assets/images/banner.jpg'
 
@@ -15,7 +16,7 @@ export default function ContentHomeSix() {
                         Discover how specific cryptocurrencies work — and<br />
                         get a bit of each crypto to try out for yourself.
                     </p> <br />
-                    <div><a href="" className="btn btn-flat">Start earning</a></div>
+                    <div><Link to='/signup' className='btn btn-flat'>Start earning</Link></div>
                 </div>
             </div>
             <div>

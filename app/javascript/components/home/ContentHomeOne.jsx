@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 import XLM from '../../../assets/images/logo/XLM.png'
 import DAI from '../../../assets/images/logo/DAI.png'
@@ -19,7 +20,7 @@ export default function ContentHomeOne() {
                     Discover how specific cryptocurrencies work — and<br/>
                      get a bit of each crypto to try out for yourself.
                 </p> <br/>
-                <div><a href="" className="btn btn-flat">Start earning</a></div>
+                    <div><Link to='/signup' className='btn btn-flat'>Start earning</Link></div>
             </div>
             <div className="contentOne-col">
                     <div className="contentOne-data"><img src={XTZ} width='34px' height='34px' alt="" />Tezos <span className="grey">XTZ</span> </div>
