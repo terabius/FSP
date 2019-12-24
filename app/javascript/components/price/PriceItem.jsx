@@ -36,6 +36,26 @@ export default class PriceItem extends Component {
         }
     }
 
+    priceFormatter(price){
+        
+        const billion= 1e9;
+        const million=1e6;
+        let rank;
+
+        if(price/billion>=1){
+            rank='B'
+            return ((price/billion).toFixed(1) + rank);
+        }else if(price/million>=1){
+            rank='M'
+            return ((price/million).toFixed(1) + rank);
+        }else{
+            return price.toPrecision(3);
+        }
+        
+    }
+
+
+
     render() {
         const divRed = { color: 'red' };
         const divGreen = { color: 'green' };
@@ -57,7 +77,7 @@ export default class PriceItem extends Component {
                 <div>  
                     <div className='price-data'>${this.props.price.toFixed(2)}</div>
                     <div className='price-data' style={percentIsPos ? divGreen : divRed }>{this.props.change.toPrecision(2)}%</div>
-                    <div className='price-data'>${this.props.market.toPrecision(3)}</div>
+                    <div className='price-data'>${this.priceFormatter(this.props.market)}</div>
                     <div className='price-data'><button className='btn btn-flat price-btn' disabled>Trade</button></div>
                     <div className='price-data'>
                         <i className="fa fa-3x fa-star" aria-hidden="true" style={this.star()} onClick={this.handleFollow}></i>
