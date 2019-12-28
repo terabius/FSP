@@ -84,7 +84,7 @@
     width: 125px;
 }
 
-.flex-item-navbar>div .btn-flat:hover{
+.flex-item-navbar>div.logged .btn-flat:hover{
     background-color: #0D42CA;
     color: white;
 }
