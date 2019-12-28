@@ -19,7 +19,7 @@
     height: 72px;
     min-height: 26px;
     width: 100%;
-    
+   z-index: 5; 
 }
 
 .scrolled{
