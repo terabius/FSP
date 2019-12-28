@@ -13,9 +13,9 @@ export default function NavbarModule({currentUserId, logout}) {
     const loggedOut = () => (
         <>
         <div className="flex-item-navbar">
-            <a className="anchor mid white">Prices</a>
-            <a className="anchor mid white">Products</a>
-            <a className="anchor mid white">Company</a>
+            <a className="anchor white">Prices</a>
+            <a className="anchor white">Products</a>
+            <a className="anchor white">Company</a>
         </div>
 
         <div className="flex-item-navbar">
@@ -34,9 +34,9 @@ export default function NavbarModule({currentUserId, logout}) {
     const loggedIn = () => (
             <>
                 <div className="flex-item-navbar">
-                    <NavLink className="anchor mid black" activeClassName="nav-selected" to='/dashboard'>Home</NavLink>
-                    <NavLink className="anchor mid black" activeClassName="nav-selected" to='/account'>Portfolio</NavLink>
-                    <NavLink className="anchor mid black" activeClassName="nav-selected" to='/price'>Prices</NavLink>
+                    <NavLink className="anchor black" activeClassName="nav-selected" to='/dashboard'>Home</NavLink>
+                    <NavLink className="anchor black" activeClassName="nav-selected" to='/account'>Portfolio</NavLink>
+                    <NavLink className="anchor black" activeClassName="nav-selected" to='/price'>Prices</NavLink>
                 </div>
 
                 <div className="flex-item-navbar">

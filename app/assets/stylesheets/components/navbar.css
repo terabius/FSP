@@ -46,7 +46,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    min-height: 100%;
 }
+
 
 /* pushing buttons to the far right */
 
@@ -55,8 +57,9 @@
 }
 
 .anchor{
+    
     font-size:16px;
-    margin-right: 10px;
+    margin-right: 40px;
     font-weight: bold;
     text-decoration: none;
 }
@@ -66,9 +69,6 @@
     text-decoration: none;
 }
 
-.mid{
-    padding-right:30px;
-}
 
 .flex-item-navbar>div .btn-flat{
     font-size: 16px;
@@ -82,3 +82,4 @@
     border:1px solid blue;
     border-width: 0 0 2px 0;
 }
+

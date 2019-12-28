@@ -52,6 +52,11 @@
     border-radius: 4px;
 
 }
+.login-container>form>div button:hover{
+    background-color: #0D42CA;
+    color:white;
+}
+
 
 .login-container>form>div button:last-child{
     margin-left: auto;

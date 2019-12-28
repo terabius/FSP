@@ -74,6 +74,10 @@
     font-size: 18px;
     margin:15px 0;
 }
+.signup-container button:hover{
+    background-color: #0D42CA;
+    color:white;
+}
 
 .signup-container>form>div:last-child{
     display: flex;
