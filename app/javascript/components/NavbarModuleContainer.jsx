@@ -5,8 +5,11 @@ import NavbarModule from './NavbarModule'
 
 
 const mapStateToProps = (state) => ({
-    currentUserId: state.session.id
     
+    currentUserId: state.session.id,
+    userFirstName: state.users.first_name,
+    userLastName: state.users.last_name,
+    userEmail: state.users.email
 });
 
 const mapDispatchToProps = (dispatch) => ({

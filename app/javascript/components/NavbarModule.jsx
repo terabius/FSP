@@ -5,19 +5,15 @@ import { loggedOutUi } from '../util/ui_util';
 import avatar from '../../assets/images/avatar.jpeg'
 
 
-export default function NavbarModule({currentUserId, logout}) {
+export default function NavbarModule({currentUserId, userFirstName, userLastName, userEmail, logout}) {
     
     const popModalOn = () =>{
-
         const dropdown = document.getElementById('dropdown-modal-container');
-        console.log(dropdown);
         dropdown.style.visibility = 'visible';
         
     }
     const popModalOff = () => {
-
         const dropdown = document.getElementById('dropdown-modal-container');
-        console.log(dropdown);
         dropdown.style.visibility = 'hidden';
 
     }
@@ -76,7 +72,8 @@ export default function NavbarModule({currentUserId, logout}) {
 
                             <div id='dropdown-modal-container' onClick={popModalOff}>   
                                 <div className="dropdown-modal">
-                                  <div>First Last</div>
+                                  <div>{userFirstName} {userLastName}</div>
+                                  <div>{userEmail}</div>
                                   <a>Settings</a>
                                   <a>Tools</a>
                                   <a>Help</a>

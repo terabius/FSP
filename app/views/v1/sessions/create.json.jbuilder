@@ -1,5 +1,5 @@
 json.set! :users do
-    json.( @user, :id, :last_name, :email)
+    json.( @user, :id, :last_name, :first_name, :email)
 end
 
 json.set! :wallets do
