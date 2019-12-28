@@ -34,9 +34,9 @@ export default function NavbarModule({currentUserId, logout}) {
     const loggedIn = () => (
             <>
                 <div className="flex-item-navbar">
-                    <NavLink className="anchor black" activeClassName="nav-selected" to='/dashboard'>Home</NavLink>
-                    <NavLink className="anchor black" activeClassName="nav-selected" to='/account'>Portfolio</NavLink>
-                    <NavLink className="anchor black" activeClassName="nav-selected" to='/price'>Prices</NavLink>
+                    <NavLink className="anchor logged black" activeClassName="nav-selected" to='/dashboard'>Home</NavLink>
+                    <NavLink className="anchor logged black" activeClassName="nav-selected" to='/account'>Portfolio</NavLink>
+                    <NavLink className="anchor logged black" activeClassName="nav-selected" to='/price'>Prices</NavLink>
                 </div>
 
                 <div className="flex-item-navbar">

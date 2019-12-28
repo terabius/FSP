@@ -65,10 +65,12 @@
 }
 
 .anchor:hover{
-    color:rgb(22,82,240);
     text-decoration: none;
 }
 
+.logged:hover{
+    color:rgb(22,82,240);
+}
 
 .flex-item-navbar>div .btn-flat{
     font-size: 16px;
