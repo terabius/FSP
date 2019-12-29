@@ -15,7 +15,8 @@ export const loggedOutUi = () => {
     const logo = document.getElementById('logo');
     logo.classList.remove('special-blue');
     const generalContainer = document.getElementById('general-container');
-    generalContainer.style.background = 'rgb(22, 82, 240)';
+    generalContainer.style.background='';
+    generalContainer.classList.add('blue');
     const ele = document.querySelectorAll('.black');
     Array.prototype.map.call(ele, (el) => {
         el.classList.remove('black');
