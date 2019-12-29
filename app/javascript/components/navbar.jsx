@@ -7,7 +7,7 @@ class Navbar extends React.Component {
    
     
  
-    scrollFunction(){
+scrollFunction(){
         
         const navbar = document.querySelector('.flex-container-navbar');
         const logo = document.getElementById('logo');

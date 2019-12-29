@@ -9,7 +9,7 @@ import LTC from '../../../assets/images/logo/LTC.png'
 const SimpleLineChart = function(){
     let data = [];
     for(let i=0;i<50;i+=1){
-        data.push({ pv: (100 + Math.floor(Math.random() * 100) )})
+        data.push({ pv: (100 + Math.floor(Math.random() * 400) )})
     }
         return (
             <LineChart width={80} height={30} data={data}>
@@ -37,7 +37,7 @@ export default class PanelItem extends Component {
             <>
                 
                 <div className='panel-ord'>{this.props.num} </div>
-                <div className="panel-name"> <img src={arr[this.props.num-1]} width='35px' height='35px' alt=""/> {this.props.name} <span>{this.props.symbol }</span>  </div>
+                <div className="panel-name"> <img src={arr[this.props.num-1]} width='36px' height='36px' alt="coin logo"/> {this.props.name} <span>{this.props.symbol }</span>  </div>
                 <div className='panel-price'>US${this.props.price}</div>
                 <div className='panel-change' style={percentIsPos ? divGreen : divRed}>{this.props.change}%</div>
                 <div className='panel-chart'>{SimpleLineChart()}</div>

@@ -93,11 +93,11 @@ export default class Login extends Component {
                 </form>
                 <div>
                     <span>
-                    <a href="">Forgot password?</a> ·
-                    <a href="">Don't have an account?</a> ·
-                    <a href="">Privacy Policy</a>
+                            <a href="/404.html">Forgot password?</a> ·
+                    <a href="/404.html">Don't have an account?</a> ·
+                    <a href="/500.html">Privacy Policy</a>
                     </span>    
-                    <a href="">Have an issue with 2-factor authentication?</a>
+                        <a href="/500.html">Have an issue with 2-factor authentication?</a>
                 </div> 
             </div>
             </>

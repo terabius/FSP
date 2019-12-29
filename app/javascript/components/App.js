@@ -13,6 +13,7 @@ import AccountContainer from "./AccountContainer"
 import FooterContainer from './FooterContainer'
 
 export default function App(props) {
+  
   return (
     <React.Fragment>
       <Navbar />
@@ -24,7 +25,6 @@ export default function App(props) {
         <ProtectedRoute path='/account' component={AccountContainer} />
         <AuthRoute exact path='/' component={Home} />
       </Switch>
-      
       <FooterContainer />
       
     </React.Fragment>          

@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function Footer({currentUserId},props) {
-    
+     
     function logIn(){
         return (
             <>
