@@ -4,7 +4,7 @@
     justify-content: space-around;
     margin-top:100px;
     margin-bottom: 80px;
-    min-height: 220px;
+    min-height: 211px;
     align-items: center;
 }
 
@@ -18,7 +18,7 @@
 .contentFour-data span{
     display: block;
     line-height: 1.75;
-    color:rgb(176, 176, 248);
+    color:#BACCFC;
     font-size: 18px;
     font-weight: lighter;
 }

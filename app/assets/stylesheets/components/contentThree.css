@@ -1,6 +1,5 @@
 .contentThree-containter{
     margin:15px 0px 90px 0px;
-    
     display: flex;
     flex-wrap:wrap;
     background-color:white;
@@ -20,15 +19,14 @@
     font-size:40px;
     font-weight: bold;
     color:#0F3257;
-    
     padding-bottom: 8px;
 }
 
 .contentThree-data{
     display:flex;
-    min-width: 100%;
+    justify-content: center;
+    align-items: center;
     margin-top: 100px;
-    overflow:hidden;
 }
 
 .contentThree-subdata{
@@ -49,11 +47,11 @@
     font-weight: bold;
     color: #0F3257;
     text-align: center;
-    padding:25px 0px;
+    padding:23px 0px 14px 0px;
 }
 
 .contentThree-subdata div>p {
-    line-height: 1.6;
+    line-height: 24px;
     font-weight: lighter;
     color:slategrey;
     text-align: center;
@@ -65,5 +63,4 @@
     color:blue;
     text-align: center;
     
-    padding:25px 0px;
 }
