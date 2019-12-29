@@ -11,7 +11,7 @@
 .contentTwo-title{
     min-width: 100%;
     text-align: center;
-    color:grey;
+    color:#90A1B8;
     font-weight: lighter;
     margin:35px auto;
 }
@@ -45,7 +45,7 @@
 }
 .contentTwo-data p{
     font-weight: lighter;
-    color:grey;
+    color:#838FA0;
     line-height: 1.6;
 }
 

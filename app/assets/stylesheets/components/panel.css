@@ -3,7 +3,6 @@
     flex-direction: column;
     background-color: white;
     border-radius: 6px;                        /* Small radius */
-    margin-bottom: 50px;
     box-shadow: 0px 2px 14px 0px rgba(62, 77, 129, 0.1);
 }
 

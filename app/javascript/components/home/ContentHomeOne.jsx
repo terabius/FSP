@@ -17,16 +17,16 @@ export default function ContentHomeOne() {
                     worth of crypto
                 </h2>
                 <p>
-                    Discover how specific cryptocurrencies work — and<br/>
+                    Discover how specific cryptocurrencies work — and <br/>
                      get a bit of each crypto to try out for yourself.
                 </p> <br/>
                     <div><Link to='/signup' className='btn btn-flat'>Start earning</Link></div>
             </div>
             <div className="contentOne-col">
-                    <div className="contentOne-data"><img src={XTZ} width='34px' height='34px' alt="" />Tezos <span className="grey">XTZ</span> </div>
-                    <div className="contentOne-data"><img src={DAI} width='34px' height='34px' alt="" />Dai <span className="grey">DAI</span>  </div>
-                    <div className="contentOne-data"><img src={EOS} width='34px' height='34px' alt="" />EOS <span className="grey">EOS</span>   </div>
-                    <div className="contentOne-data"><img src={XLM} width='34px' height='34px' alt="" />Stellar Lumens <span className="grey">XLM</span> </div>
+                    <div className="contentOne-data"><img src={XTZ} width='38px' height='38px' alt="tezos" />Tezos <span className="grey">XTZ</span> </div>
+                    <div className="contentOne-data"><img src={DAI} width='38px' height='38px' alt="dai" />Dai <span className="grey">DAI</span>  </div>
+                    <div className="contentOne-data"><img src={EOS} width='38px' height='38px' alt="eos" />EOS <span className="grey">EOS</span>   </div>
+                    <div className="contentOne-data"><img src={XLM} width='38px' height='38px' alt="stellar" />Stellar Lumens <span className="grey">XLM</span> </div>
             </div>
           </div>  
         </>
