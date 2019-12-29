@@ -7,11 +7,13 @@
 
 .blue{
   background-color: rgb(22,82,240);
-  height: 550px;
+  height: 570px;
 }
 
 body{
-  
+  /* font-family: 'Kulim Park', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  font-family: 'Open Sans', sans-serif; */
   font-family: 'Josefin Sans', sans-serif;
   font-family: 'Lato', sans-serif;
 }

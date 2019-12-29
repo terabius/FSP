@@ -8,7 +8,7 @@ export default function Panel() {
            
         <div className="container-tableau">
             <div className="row-tableau header-tableau">
-                <div className='panel-ord'># </div>
+                <div className='panel-ord header-ord'># </div>
                 <div className='panel-name'>Name</div>
                 <div className='panel-price'>Price</div>
                 <div className='panel-change'>Change</div>

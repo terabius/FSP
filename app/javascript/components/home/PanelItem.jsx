@@ -8,12 +8,12 @@ import LTC from '../../../assets/images/logo/LTC.png'
 
 const SimpleLineChart = function(){
     let data = [];
-    for(let i=0;i<30;i+=1){
+    for(let i=0;i<50;i+=1){
         data.push({ pv: (100 + Math.floor(Math.random() * 100) )})
     }
         return (
-            <LineChart width={100} height={50} data={data}>
-                <Line type="monotone" dataKey="pv" dot={false} strokeWidth='2' stroke="lightgrey" />
+            <LineChart width={80} height={30} data={data}>
+                <Line type="monotone" dataKey="pv" dot={false} strokeWidth='1.5' stroke="#B8C1CB" />
             </LineChart>
         );
 }
@@ -41,7 +41,7 @@ export default class PanelItem extends Component {
                 <div className='panel-price'>US${this.props.price}</div>
                 <div className='panel-change' style={percentIsPos ? divGreen : divRed}>{this.props.change}%</div>
                 <div className='panel-chart'>{SimpleLineChart()}</div>
-                <div className="panel-action"><div className="btn btn-flat green">buy</div></div>
+                <div className="panel-action"><div className="btn btn-flat green">Buy</div></div>
             </>
         )
     }
