@@ -48,8 +48,25 @@ User authentication both for registration and sign up has been implemented using
 #### Sign In
 ![Login](./images/login.png)
 
+### Dashboard 
+On a successful sign up/sign in, a user will be directed to his dashboard where he will be able to view a graphical representation of the evolution his followed crypto assets (or the 6 most popular ones if it is his first sign in on the platform) over a set period of time.
+#### How the graphs work ?
+* An API call is made with Axios? to retrieve historical data from several market places. Data are then formatted and stored in the redux store for persistance.
 
+* Chartjs Library is then provided with these data to built a graph of the price evolution over time.
+// insert code here //
 
+#### Dashboard
+![Dashboard](./images/dashboard.png)
+
+### Price Component
+The price component contains the list of all assets. They are searchable by name and the star icon allows users to add them on their watchlist.
+//explain how it works and show code snippet//
+
+#### Search 
+![Search](./images/search.gif)
+#### Follow
+![Follow](./images/follow.gif)
 
 ## Future Improvements:
 
