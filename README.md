@@ -54,16 +54,33 @@ On a successful sign up/sign in, a user will be directed to his dashboard where 
 * An API call is made with Axios? to retrieve historical data from several market places. Data are then formatted and stored in the redux store for persistance.
 
 * Chartjs Library is then provided with these data to built a graph of the price evolution over time.
-// insert code here //
 
 #### Dashboard
 ![Dashboard](./images/dashboard.png)
 
 ### Price Component
 The price component contains the list of all assets. They are searchable by name and the star icon allows users to add them on their watchlist.
-//explain how it works and show code snippet//
 
 #### Search 
+The Search was built using plain JavaScript. 
+```
+
+const handleSearch = (event) => {
+   
+    let assets = document.querySelectorAll('.price-element-border');
+    let input = event.target.value.toUpperCase();
+
+    assets.forEach((crypto) => {
+        
+        if(crypto.textContent.toUpperCase().indexOf(input) > -1){
+            crypto.style.display = '';
+        }else{
+            crypto.style.display = 'none'; 
+        }
+    });
+}
+```
+
 ![Search](./images/search.gif)
 #### Follow
 ![Follow](./images/follow.gif)
