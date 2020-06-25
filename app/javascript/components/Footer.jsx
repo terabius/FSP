@@ -8,9 +8,9 @@ export default function Footer({currentUserId},props) {
                 <div className="test"></div>
                 <div className="footer-container">
                     <div>
-                        <a href="">Home</a>
-                        <a href="">Careers</a>
-                        <a href="">Legal & Privacy</a>
+                        <a href="https://www.linkedin.com/in/bobandre/">Home</a>
+                        <a href="https://www.linkedin.com/in/bobandre/">Careers</a>
+                        <a href="https://www.linkedin.com/in/bobandre/">Legal & Privacy</a>
                     </div>
 
                     <div>
@@ -22,7 +22,7 @@ export default function Footer({currentUserId},props) {
                             </select>
                         </span>
                         <span>
-                            <div className="btn btn-flat spec">Need Help?</div>
+                            <a href="https://www.linkedin.com/in/bobandre/"> <div className="btn btn-flat spec">Need Help?</div></a>
                         </span>
                     </div>
                 </div>

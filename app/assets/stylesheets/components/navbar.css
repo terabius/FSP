@@ -160,3 +160,22 @@
 #signout{
     color:#DF5F66;
 }
+
+#disabled-btn{
+    background: gray;
+    pointer-events: none;
+}
+#disabled-btn:hover{
+    background: gray;
+    pointer-events: none;
+}
+.navbar-bell{
+    background: gray;
+
+}
+.navbar-bell:hover{
+    background: gray;
+}
+.navbar-bell > svg{
+    color:black;
+}
