@@ -27,9 +27,9 @@ export default function NavbarModule({currentUserId, userFirstName, userLastName
     const loggedOut = () => (
         <>
         <div className="flex-item-navbar">
-            <a className="anchor white">Prices</a>
-            <a className="anchor white">Products</a>
-            <a className="anchor white">Company</a>
+            {/* <a className="anchor white">Prices</a> */}
+            {/* <a className="anchor white">Products</a> */}
+            {/* <a className="anchor white">Company</a> */}
         </div>
 
         <div className="flex-item-navbar">

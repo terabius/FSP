@@ -44,15 +44,24 @@ export default class Login extends Component {
     }
     
     handleDemo() {
-        
-        setTimeout(() => {
 
-            const emailField = document.getElementById('email').value = 'demo@demo.demo';
-            const password = document.getElementById('password').value = 'password';
-            const sub = document.getElementById('sub');
+
+            const emailField = document.getElementById('email').value = 'a@a.a';
+            const password = document.getElementById('password').value = 'aaaaaa';
+            this.setState({
+                email:emailField,
+                password:password
+            });
+
+           const sub = document.getElementById('sub');
+
+        setTimeout(() => {
+            console.log(sub);
+            
             sub.click();
+
         }
-            , 2000);
+            , 2000);        
 
     }
 
@@ -91,14 +100,14 @@ export default class Login extends Component {
                         </button>
                     </div>
                 </form>
-                <div>
-                    <span>
-                            <a href="/404.html">Forgot password?</a> ·
-                    <a href="/404.html">Don't have an account?</a> ·
-                    <a href="/500.html">Privacy Policy</a>
-                    </span>    
-                        <a href="/500.html">Have an issue with 2-factor authentication?</a>
-                </div> 
+                {/* <div> */}
+                    {/* <span> */}
+                    {/* <a href="/404.html">Forgot password?</a> · */}
+                    {/* <a href="/404.html">Don't have an account?</a> · */}
+                    {/* <a href="/500.html">Privacy Policy</a> */}
+                    {/* </span>     */}
+                        {/* <a href="/500.html">Have an issue with 2-factor authentication?</a> */}
+                {/* </div>  */}
             </div>
             </>
 
