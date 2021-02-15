@@ -24,7 +24,7 @@
     "reselect": "^4.0.0",
     "turbolinks": "^5.2.0",
     "typescript": "^3.7.2",
-    "yarn": "^1.19.1"
+    "yarn": "^1.22.0"
   },
   "version": "0.1.0",
   "devDependencies": {
